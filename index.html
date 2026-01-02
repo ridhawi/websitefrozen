@@ -34,12 +34,12 @@
   </div>
 </div>
 
-   <!-- HEADER BARU -->
+   <!-- HEADER -->
   <header class="w-full py-8 text-gray-900/90 bg-gradient-to-b from-yellow-300 to-yellow-500 shadow-xl rounded-b-3xl overflow-visible mb-10">
         <div class="w-full px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
 
-            <!-- Logo (Menggunakan placeholder yang sama) -->
-            <a href="https://prebuiltui.com" target="_blank" class="block rounded-lg overflow-hidden transition-opacity hover:opacity-80">
+            <!-- LOGO -->
+            <a href="" target="_blank" class="block rounded-lg overflow-hidden transition-opacity hover:opacity-80">
                 <img 
                     src="https://i.ibb.co.com/j96FXJFr/Logo-Lariz-FFS.png" 
                     alt="Food Brand Logo" 
@@ -49,19 +49,19 @@
                 >
             </a>
             
-            <!-- Moto Bertema Makanan -->
+            <!-- MOTO -->
             <h2 class="mt-3 text-lg font-semibold text-center italic">
                 "Praktis, Hemat & Lezat❄️"
             </h2>
 
-            <!-- ALAMAT BARU -->
+            <!-- ALAMAT -->
             <div class="flex items-center mt-3 text-sm font-medium text-gray-800">
                 <!-- Ikon Lokasi (Placeholder SVG) -->
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2 stroke-gray-900/80">
                     <path d="M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M21 10c0 7-9 11-9 11s-9-4-9-11a9 9 0 0 1 18 0Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <!-- Ganti alamat ini dengan alamat yang sebenarnya -->
+                <!-- alamat -->
                 <span>Jl. Kemuning 4, Kp. Sudimampir 003/012 (Dpn. Puslitbang)</span>
             </div>
         </div>
@@ -95,487 +95,506 @@
 
       <!--  KATALOG PRODUK  -->
 
-<section id="katalog">
-    <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
-        <header class="mb-8">
-            <div class="overflow-hidden w-full">
-                <div class="flex justify-between w-full whitespace-nowrap animate-title-slide">
-                    <span class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent px-4 uppercase">.</span>
-                    <span class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent px-4 uppercase">Katalog Produk</span>
-                    <span class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent px-4 uppercase">.</span>
-                </div>
-            </div>
-            <p class="mt-4 max-w-md mx-auto text-zinc-600 text-center">
-                Hemat waktu, hemat uang, tapi tetap puas! Cocok untuk keluarga atau dijadikan stok di rumah.
+<section id="katalog" class="bg-zinc-50 py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <header class="mb-12 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent uppercase tracking-tighter italic">
+                Katalog Produk
+            </h2>
+            <div class="h-1 w-20 bg-yellow-500 mx-auto mt-2 rounded-full"></div>
+            <p class="mt-4 max-w-md mx-auto text-zinc-500 text-sm">
+                Pilih produk berkualitas untuk kebutuhan dapur Anda. Gunakan fitur pencarian untuk menemukan produk lebih cepat.
             </p>
         </header>
 
-        <div class="mt-8 block lg:hidden">
-            <button onclick="toggleMobileFilter()" class="flex w-full items-center justify-between border-b-2 border-yellow-500 pb-2 text-zinc-900 transition hover:border-yellow-600">
-                <span class="text-sm font-bold uppercase tracking-widest">Filters & Sorting</span>
-                <svg id="mobileFilterIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5 transition-transform duration-300">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
-            </button>
-        </div>
-
-        <div class="mt-4 lg:mt-8 lg:grid lg:grid-cols-4 lg:items-start lg:gap-8">
+        <div class="flex flex-col lg:flex-row gap-8 items-start">
             
-            <div id="filterSidebar" class="hidden space-y-4 lg:block bg-white p-4 lg:p-0 rounded-xl border lg:border-none border-zinc-100 shadow-sm lg:shadow-none mb-6 lg:mb-0">
-                <div>
-                    <label class="block text-xs font-black text-zinc-500 uppercase tracking-widest mb-2">Urutkan Harga</label>
-                    <select id="SortBy" class="mt-1 w-full rounded-lg border-zinc-200 text-sm p-3 focus:ring-yellow-500 focus:border-yellow-500" onchange="renderProducts()">
-                        <option value="none">Default</option>
-                        <option value="price-desc">Harga Tertinggi</option>
-                        <option value="price-asc">Harga Terendah</option>
-                        <option value="name-asc">Nama A–Z</option>
-                        <option value="name-desc">Nama Z–A</option>
-                    </select>
-                </div>
-                
-                <div>
-                    <p class="block text-xs font-black text-zinc-500 uppercase tracking-widest mb-3">Kategori Produk</p>
-                    <div class="space-y-3">
-                        <label class="flex items-center gap-3 cursor-pointer group">
-                            <input type="checkbox" class="h-5 w-5 rounded border-zinc-300 text-yellow-500 focus:ring-yellow-400" name="category" value="frozen" onchange="renderProducts()">
-                            <span class="text-sm text-zinc-700 group-hover:text-yellow-600 transition-colors font-medium">Frozen Food</span>
-                        </label>
-                        <label class="flex items-center gap-3 cursor-pointer group">
-                            <input type="checkbox" class="h-5 w-5 rounded border-zinc-300 text-yellow-500 focus:ring-yellow-400" name="category" value="snack" onchange="renderProducts()">
-                            <span class="text-sm text-zinc-700 group-hover:text-yellow-600 transition-colors font-medium">Makanan Ringan</span>
-                        </label>
-                        <label class="flex items-center gap-3 cursor-pointer group">
-                            <input type="checkbox" class="h-5 w-5 rounded border-zinc-300 text-yellow-500 focus:ring-yellow-400" name="category" value="sembako" onchange="renderProducts()">
-                            <span class="text-sm text-zinc-700 group-hover:text-yellow-600 transition-colors font-medium">Sembako</span>
-                        </label>
-                        <button id="resetFilter" class="mt-4 w-full py-2 text-xs font-bold text-gray-400 hover:text-red-500 underline transition-colors">Reset Filter</button>
+            <aside class="w-full lg:w-1/4 lg:sticky lg:top-28 space-y-5">
+                <div class="bg-white p-6 rounded-3xl border border-zinc-200 shadow-sm">
+                    <div class="mb-6">
+                        <label class="block text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-2 text-center lg:text-left">Cari Produk</label>
+                        <div class="relative group">
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                placeholder="Cari nugget, sosis..." 
+                                class="w-full rounded-xl border-zinc-200 text-sm p-3 pr-10 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all outline-none"
+                                oninput="resetPaginationAndRender()"
+                            >
+                            <div class="absolute right-3 top-3.5 text-zinc-400 group-focus-within:text-yellow-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="lg:col-span-3">
-                <ul id="product-list" class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6 border border-zinc-100 rounded-3xl p-4 lg:p-8 bg-white shadow-sm transition-all">
+                    <div class="mb-6">
+                        <label class="block text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-2">Urutkan</label>
+                        <select id="SortBy" class="w-full rounded-xl border-zinc-200 text-sm p-3 focus:ring-yellow-500 focus:border-yellow-500 outline-none" onchange="renderProducts()">
+                            <option value="none">Default</option>
+                            <option value="price-asc">Harga Terendah</option>
+                            <option value="price-desc">Harga Tertinggi</option>
+                            <option value="name-asc">Nama A-Z</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-6">
+                        <p class="block text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-3">Kategori</p>
+                        <div class="grid grid-cols-1 gap-2">
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input type="checkbox" name="category" value="frozen" class="h-5 w-5 rounded border-zinc-300 text-yellow-500 focus:ring-yellow-500" onchange="resetPaginationAndRender()">
+                                <span class="text-sm text-zinc-600 group-hover:text-yellow-600 transition-colors">Frozen Food</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input type="checkbox" name="category" value="snack" class="h-5 w-5 rounded border-zinc-300 text-yellow-500 focus:ring-yellow-500" onchange="resetPaginationAndRender()">
+                                <span class="text-sm text-zinc-600 group-hover:text-yellow-600 transition-colors">Snack</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group">
+                                <input type="checkbox" name="category" value="sembako" class="h-5 w-5 rounded border-zinc-300 text-yellow-500 focus:ring-yellow-500" onchange="resetPaginationAndRender()">
+                                <span class="text-sm text-zinc-600 group-hover:text-yellow-600 transition-colors">Sembako</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="resetFilter" class="w-full py-2 text-[10px] font-black text-red-400 hover:text-red-600 uppercase tracking-widest transition-colors border-t border-zinc-100 mt-2 pt-4">
+                        Reset Filter
+                    </button>
+                </div>
+            </aside>
+
+            <main class="w-full lg:w-3/4">
+                <ul id="product-list" class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
                     </ul>
-                
-                <div class="text-center mt-10">
-                    <button id="showAllBtn" class="px-10 py-4 bg-zinc-900 text-white rounded-full font-bold shadow-lg hover:bg-yellow-500 transition-all hover:-translate-y-1">
+
+                <div id="no-products" class="hidden text-center py-20 bg-white rounded-3xl border border-dashed border-zinc-300">
+                    <p class="text-zinc-400 font-medium">Produk tidak ditemukan.</p>
+                    <button onclick="document.getElementById('resetFilter').click()" class="mt-2 text-yellow-600 text-sm font-bold underline">Lihat semua produk</button>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button id="showAllBtn" class="px-10 py-4 bg-zinc-900 text-white rounded-full text-xs font-black uppercase tracking-widest shadow-xl hover:bg-yellow-500 hover:scale-105 transition-all active:scale-95">
                         Lihat Lebih Banyak
                     </button>
                 </div>
-            </div>
+            </main>
         </div>
     </div>
 </section>
 
 <script>
-// Fungsi Toggle Filter untuk HP
-function toggleMobileFilter() {
-    const sidebar = document.getElementById('filterSidebar');
-    const icon = document.getElementById('mobileFilterIcon');
-    sidebar.classList.toggle('hidden');
-    icon.classList.toggle('rotate-180');
-}
-
-// Master Data (Sama seperti sebelumnya)
+// MASTER DATA
 const baseData = [
-  {name:"Produk 2", price:25000, category:"frozen", image:"https://i.ibb.co.com/My1fSvfF/Whats-App-Image-2025-12-18-at-20-26-04.jpg"},
-  {name:"Produk 3", price:12000, category:"snack", image:"https://i.ibb.co.com/pB6QWwCd/Whats-App-Image-2025-12-18-at-20-26-05.jpg"},
-  {name:"Produk 4", price:15000, category:"sembako", image:"https://i.ibb.co.com/cGLwCfM/Whats-App-Image-2025-12-18-at-20-26-05-1.jpg"},
-  {name:"Produk 5", price:35000, category:"frozen", image:"https://i.ibb.co.com/Wv47hXLQ/Whats-App-Image-2025-12-18-at-20-26-05-2.jpg"},
-  {name:"Produk 6", price:22000, category:"frozen", image:"https://i.ibb.co.com/bMDTQ41d/Whats-App-Image-2025-12-18-at-20-26-06.jpg"},
-  {name:"Produk 7", price:15000, category:"frozen", image:"https://i.ibb.co.com/Kjzn9zwx/Whats-App-Image-2025-12-18-at-20-26-06-1.jpg"},
-  {name:"Produk 8", price:8000, category:"snack", image:"https://i.ibb.co.com/93cSbMwm/Whats-App-Image-2025-12-18-at-20-26-06-2.jpg"},
-  {name:"Produk 9", price:10000, category:"snack", image:"https://i.ibb.co.com/kgCn79Hk/Whats-App-Image-2025-12-18-at-20-26-07.jpg"},
-  {name:"Produk 10", price:12000, category:"sembako", image:"https://i.ibb.co.com/03GsLK3/Whats-App-Image-2025-12-18-at-20-26-07-1.jpg"},
-  {name:"Produk 11", price:90000, category:"sembako", image:"https://i.ibb.co.com/99DwKgQP/Whats-App-Image-2025-12-18-at-20-26-07-2.jpg"},
-  {name:"Produk 12", price:25000, category:"sembako", image:"https://i.ibb.co.com/b5H1R12b/Whats-App-Image-2025-12-18-at-20-26-08.jpg"},
-  {name:"Produk 13", price:18000, category:"frozen", image:"https://i.ibb.co.com/Zp9VWVxn/Whats-App-Image-2025-12-18-at-20-26-08-1.jpg"},
-  {name:"Produk 14", price:25000, category:"frozen", image:"https://i.ibb.co.com/7tN4BkTN/Whats-App-Image-2025-12-18-at-20-26-08-2.jpg"},
-  {name:"Produk 15", price:12000, category:"snack", image:"https://i.ibb.co.com/J1MhtxC/Whats-App-Image-2025-12-18-at-20-26-08-3.jpg"},
-  {name:"Produk 16", price:15000, category:"sembako", image:"https://i.ibb.co.com/tTFZz8TT/Whats-App-Image-2025-12-18-at-20-26-09.jpg"},
-  {name:"Produk 17", price:35000, category:"frozen", image:"https://i.ibb.co.com/vxzNNCn8/Whats-App-Image-2025-12-18-at-20-26-09-1.jpg"},
-  {name:"Produk 18", price:22000, category:"frozen", image:"https://i.ibb.co.com/jP5ZQW4F/Whats-App-Image-2025-12-18-at-20-26-11.jpg"},
-  {name:"Produk 19", price:15000, category:"frozen", image:"https://i.ibb.co.com/s9RWspw2/Whats-App-Image-2025-12-18-at-20-26-11-1.jpg"},
-  {name:"Produk 20", price:8000, category:"snack", image:"https://i.ibb.co.com/pjjZb8jQ/Whats-App-Image-2025-12-18-at-20-26-11-2.jpg"},
-  {name:"Produk 21", price:10000, category:"snack", image:"https://i.ibb.co.com/Lh6mnNBG/Whats-App-Image-2025-12-18-at-20-26-12.jpg"},
-  {name:"Produk 22", price:12000, category:"sembako", image:"https://i.ibb.co.com/PvcWVNcM/Whats-App-Image-2025-12-18-at-20-26-12-1.jpg"},
-  {name:"Produk 23", price:90000, category:"sembako", image:"https://i.ibb.co.com/8h5Ct4B/Whats-App-Image-2025-12-18-at-20-26-12-2.jpg"},
-  {name:"Produk 24", price:25000, category:"sembako", image:"https://i.ibb.co.com/pjwhg2dW/Whats-App-Image-2025-12-18-at-20-26-13.jpg"},
-  {name:"Produk 25", price:25000, category:"sembako", image:"https://i.ibb.co.com/CKyvDVkx/Whats-App-Image-2025-12-18-at-20-26-13-1.jpg"},
-  {name:"Produk 26", price:18000, category:"frozen", image:"https://i.ibb.co.com/TMm9ZBZh/Whats-App-Image-2025-12-18-at-20-26-13-2.jpg"},
-  {name:"Produk 27", price:25000, category:"frozen", image:"https://i.ibb.co.com/PvN0YHn2/Whats-App-Image-2025-12-18-at-20-26-13-3.jpg"},
-  {name:"Produk 28", price:12000, category:"snack", image:"https://i.ibb.co.com/MzWvhYN/Whats-App-Image-2025-12-18-at-20-26-14.jpg"},
-  {name:"Produk 29", price:15000, category:"sembako", image:"https://i.ibb.co.com/3ykCGSM1/Whats-App-Image-2025-12-18-at-20-26-14-1.jpg"},
-  {name:"Produk 30", price:35000, category:"frozen", image:"https://i.ibb.co.com/spyDhhFw/Whats-App-Image-2025-12-18-at-20-26-14-2.jpg"},
-  {name:"Produk 31", price:22000, category:"frozen", image:"https://i.ibb.co.com/B25vPG1k/Whats-App-Image-2025-12-18-at-20-26-14-3.jpg"},
-  {name:"Produk 32", price:15000, category:"frozen", image:"https://i.ibb.co.com/rRr0Vjg3/Whats-App-Image-2025-12-18-at-20-26-15.jpg"},
-  {name:"Produk 33", price:8000, category:"snack", image:"https://i.ibb.co.com/CpdnfpbN/Whats-App-Image-2025-12-18-at-20-26-15-1.jpg"},
-  {name:"Produk 34", price:10000, category:"snack", image:"https://i.ibb.co.com/HD5GPYpJ/Whats-App-Image-2025-12-18-at-20-26-16.jpg"},
-  {name:"Produk 35", price:12000, category:"sembako", image:"https://i.ibb.co.com/5h30WvJg/Whats-App-Image-2025-12-18-at-20-26-16-1.jpg"},
-  {name:"Produk 36", price:90000, category:"sembako", image:"https://i.ibb.co.com/qHYHTF7/Whats-App-Image-2025-12-18-at-20-26-16-2.jpg"},
-  {name:"Produk 37", price:25000, category:"sembako", image:"https://i.ibb.co.com/M515tcp4/Whats-App-Image-2025-12-18-at-20-26-16-3.jpg"},
-  {name:"Produk 38", price:18000, category:"frozen", image:"https://i.ibb.co.com/6cq7Q52h/Whats-App-Image-2025-12-18-at-20-26-17.jpg"},
-  {name:"Produk 39", price:25000, category:"frozen", image:"https://i.ibb.co.com/N6hnm2H0/Whats-App-Image-2025-12-18-at-20-26-17-1.jpg"},
-  {name:"Produk 40", price:12000, category:"snack", image:"https://i.ibb.co.com/1GNzK283/Whats-App-Image-2025-12-18-at-20-26-17-2.jpg"},
-  {name:"Produk 41", price:15000, category:"sembako", image:"https://i.ibb.co.com/4nYrh1wH/Whats-App-Image-2025-12-18-at-20-26-18.jpg"},
-  {name:"Produk 42", price:35000, category:"frozen", image:"https://i.ibb.co.com/Z1bhkHFL/Whats-App-Image-2025-12-18-at-20-26-18-1.jpg"},
-  {name:"Produk 43", price:22000, category:"frozen", image:"https://i.ibb.co.com/rDpzfj9/Whats-App-Image-2025-12-18-at-20-26-18-2.jpg"},
-  {name:"Produk 44", price:15000, category:"frozen", image:"https://i.ibb.co.com/Hm9LT9c/Whats-App-Image-2025-12-18-at-20-26-18-3.jpg"},
-  {name:"Produk 45", price:8000, category:"snack", image:"https://i.ibb.co.com/p6Q1wJft/Whats-App-Image-2025-12-18-at-20-26-19.jpg"},
-  {name:"Produk 46", price:10000, category:"snack", image:"https://i.ibb.co.com/V0G8mZsN/Whats-App-Image-2025-12-18-at-20-26-19-1.jpg"},
-  {name:"Produk 47", price:12000, category:"sembako", image:"https://i.ibb.co.com/G3cX0kK2/Whats-App-Image-2025-12-18-at-20-26-19-2.jpg"},
-  {name:"Produk 48", price:90000, category:"sembako", image:"https://i.ibb.co.com/N6q7j3V6/Whats-App-Image-2025-12-18-at-20-26-20-1.jpg"},
-  {name:"Produk 49", price:25000, category:"sembako", image:"https://i.ibb.co.com/3yhKvPDj/Whats-App-Image-2025-12-18-at-20-26-20-2.jpg"},
-  {name:"Produk 50", price:18000, category:"frozen", image:"https://i.ibb.co.com/wNqdkDhN/Whats-App-Image-2025-12-18-at-20-26-20-3.jpg"},
-  {name:"Produk 51", price:25000, category:"frozen", image:"https://i.ibb.co.com/gMQZC03v/Whats-App-Image-2025-12-18-at-20-26-21.jpg"},
-  {name:"Produk 52", price:12000, category:"snack", image:"https://i.ibb.co.com/NnKWpJPw/Whats-App-Image-2025-12-18-at-20-26-21-1.jpg"},
-  {name:"Produk 53", price:15000, category:"sembako", image:"https://i.ibb.co.com/CFbKH1T/Whats-App-Image-2025-12-18-at-20-26-21-2.jpg"},
-  {name:"Produk 54", price:35000, category:"frozen", image:"https://i.ibb.co.com/t5PJJvg/Whats-App-Image-2025-12-18-at-20-26-21-3.jpg"},
-  {name:"Produk 55", price:22000, category:"frozen", image:"https://i.ibb.co.com/qLqNQzfq/Whats-App-Image-2025-12-18-at-20-26-22.jpg"},
-  {name:"Produk 56", price:15000, category:"frozen", image:"https://i.ibb.co.com/wryQt2qr/Whats-App-Image-2025-12-18-at-20-26-22-1.jpg"},
-  {name:"Produk 57", price:8000, category:"snack", image:"https://i.ibb.co.com/57sM4gB/Whats-App-Image-2025-12-18-at-20-26-22-2.jpg"},
-  {name:"Produk 58", price:10000, category:"snack", image:"https://i.ibb.co.com/HTkkNb22/Whats-App-Image-2025-12-18-at-20-26-22-3.jpg"},
-  {name:"Produk 59", price:12000, category:"sembako", image:"https://i.ibb.co.com/BVxBRG8V/Whats-App-Image-2025-12-18-at-20-26-23.jpg"},
-  {name:"Produk 60", price:90000, category:"sembako", image:"https://i.ibb.co.com/232nhYHV/Whats-App-Image-2025-12-18-at-20-26-23-1.jpg"},
-  {name:"Produk 61", price:25000, category:"sembako", image:"https://i.ibb.co.com/ZzQ5Nt0q/Whats-App-Image-2025-12-18-at-20-26-23-2.jpg"},
-  {name:"Produk 62", price:25000, category:"sembako", image:"https://i.ibb.co.com/zhDHf7jK/Whats-App-Image-2025-12-18-at-20-26-23-3.jpg"},
-  {name:"Produk 63", price:18000, category:"frozen", image:"https://i.ibb.co.com/LzKxPvNx/Whats-App-Image-2025-12-18-at-20-26-24.jpg"},
-  {name:"Produk 64", price:25000, category:"frozen", image:"https://i.ibb.co.com/HTmYPDYW/Whats-App-Image-2025-12-18-at-20-26-24-1.jpg"},
-  {name:"Produk 65", price:12000, category:"snack", image:"https://i.ibb.co.com/bR2gpY9b/Whats-App-Image-2025-12-18-at-20-26-24-2.jpg"},
-  {name:"Produk 66", price:15000, category:"sembako", image:"https://i.ibb.co.com/R4NM8HSc/Whats-App-Image-2025-12-18-at-20-26-24-3.jpg"},
-  {name:"Produk 67", price:35000, category:"frozen", image:"https://i.ibb.co.com/5hs2z4jD/Whats-App-Image-2025-12-18-at-20-26-25.jpg"},
-  {name:"Produk 68", price:22000, category:"frozen", image:"https://i.ibb.co.com/typBrTm/Whats-App-Image-2025-12-18-at-20-26-25-1.jpg"},
-  {name:"Produk 69", price:15000, category:"frozen", image:"https://i.ibb.co.com/Pv1XDQPY/Whats-App-Image-2025-12-18-at-20-26-25-2.jpg"},
-  {name:"Produk 70", price:8000, category:"snack", image:"https://i.ibb.co.com/6cfT8T2s/Whats-App-Image-2025-12-18-at-20-26-26.jpg"},
-  {name:"Produk 71", price:10000, category:"snack", image:"https://i.ibb.co.com/jksG0pWv/Whats-App-Image-2025-12-18-at-20-26-26-1.jpg"},
-  {name:"Produk 72", price:12000, category:"sembako", image:"https://i.ibb.co.com/JW9LbNF4/Whats-App-Image-2025-12-18-at-20-26-26-2.jpg"},
-  {name:"Produk 73", price:90000, category:"sembako", image:"https://i.ibb.co.com/4nZCvKX4/Whats-App-Image-2025-12-18-at-20-26-26-3.jpg"},
-  {name:"Produk 74", price:18000, category:"frozen", image:"https://i.ibb.co.com/v62VZkDQ/Whats-App-Image-2025-12-18-at-20-26-27.jpg"},
-  {name:"Produk 75", price:25000, category:"frozen", image:"https://i.ibb.co.com/x8sw3zJX/Whats-App-Image-2025-12-18-at-20-26-27-1.jpg"},
-  {name:"Produk 76", price:12000, category:"snack", image:"https://i.ibb.co.com/hNFsgzz/Whats-App-Image-2025-12-18-at-20-26-27-2.jpg"},
-  {name:"Produk 77", price:15000, category:"sembako", image:"https://i.ibb.co.com/bMkg3XyC/Whats-App-Image-2025-12-18-at-20-26-27-3.jpg"},
-  {name:"Produk 78", price:35000, category:"frozen", image:"https://i.ibb.co.com/QsT1Lb4/Whats-App-Image-2025-12-18-at-20-26-28.jpg"},
-  {name:"Produk 79", price:22000, category:"frozen", image:"https://i.ibb.co.com/GQ5DZnNQ/Whats-App-Image-2025-12-18-at-20-26-28-1.jpg"},
-  {name:"Produk 80", price:15000, category:"frozen", image:"https://i.ibb.co.com/wZK89xrx/Whats-App-Image-2025-12-18-at-20-26-28-2.jpg"},
-  {name:"Produk 81", price:8000, category:"snack", image:"https://i.ibb.co.com/BVNH5F8y/Whats-App-Image-2025-12-18-at-20-26-29.jpg"},
-  {name:"Produk 82", price:10000, category:"snack", image:"https://i.ibb.co.com/hNFsgzz/Whats-App-Image-2025-12-18-at-20-26-27-2.jpg"},
-  {name:"Produk 83", price:12000, category:"sembako", image:"https://i.ibb.co.com/bMkg3XyC/Whats-App-Image-2025-12-18-at-20-26-27-3.jpg"},
-  {name:"Produk 84", price:90000, category:"sembako", image:"https://i.ibb.co.com/QsT1Lb4/Whats-App-Image-2025-12-18-at-20-26-28.jpg"},
-  {name:"Produk 85", price:25000, category:"sembako", image:"https://i.ibb.co.com/GQ5DZnNQ/Whats-App-Image-2025-12-18-at-20-26-28-1.jpg"},
-  {name:"Produk 86", price:18000, category:"frozen", image:"https://i.ibb.co.com/wZK89xrx/Whats-App-Image-2025-12-18-at-20-26-28-2.jpg"},
-  {name:"Produk 87", price:25000, category:"frozen", image:"https://i.ibb.co.com/BVNH5F8y/Whats-App-Image-2025-12-18-at-20-26-29.jpg"},
-  {name:"Produk 88", price:12000, category:"snack", image:"https://i.ibb.co.com/84xk4hs9/Whats-App-Image-2025-12-18-at-20-26-29-1.jpg"},
-  {name:"Produk 89", price:15000, category:"sembako", image:"https://i.ibb.co.com/MD0Bc1YY/Whats-App-Image-2025-12-18-at-20-26-29-2.jpg"},
-  {name:"Produk 90", price:35000, category:"frozen", image:"https://i.ibb.co.com/HL1T54jB/Whats-App-Image-2025-12-18-at-20-26-29-3.jpg"},
-  {name:"Produk 91", price:22000, category:"frozen", image:"https://i.ibb.co.com/kjLdHdk/Whats-App-Image-2025-12-18-at-20-26-30.jpg"},
-  {name:"Produk 92", price:15000, category:"frozen", image:"https://i.ibb.co.com/Q312SyM0/Whats-App-Image-2025-12-18-at-20-26-30-1.jpg"},
-  {name:"Produk 93", price:8000, category:"snack", image:"https://i.ibb.co.com/G4GDkJNQ/Whats-App-Image-2025-12-18-at-20-26-30-2.jpg"},
-  {name:"Produk 94", price:10000, category:"snack", image:"https://i.ibb.co.com/CsWjx6ZY/Whats-App-Image-2025-12-18-at-20-26-30-3.jpg"},
-  {name:"Produk 95", price:12000, category:"sembako", image:"https://i.ibb.co.com/H1y8JsL/Whats-App-Image-2025-12-18-at-20-26-31.jpg"},
-  {name:"Produk 96", price:90000, category:"sembako", image:"https://i.ibb.co.com/7NGKbbg9/Whats-App-Image-2025-12-18-at-20-26-31-1.jpg"},
-  {name:"Produk 97", price:25000, category:"sembako", image:"https://i.ibb.co.com/Z6StsS87/Whats-App-Image-2025-12-18-at-20-26-31-2.jpg"},
-  {name:"Produk 98", price:25000, category:"sembako", image:"https://i.ibb.co.com/Ng6R8mDt/Whats-App-Image-2025-12-18-at-20-26-31-3.jpg"},
-  {name:"Produk 99", price:18000, category:"frozen", image:"https://i.ibb.co.com/fdwc3Kcz/Whats-App-Image-2025-12-18-at-20-26-32.jpg"},
-  {name:"Produk 100", price:25000, category:"frozen", image:"https://i.ibb.co.com/S7RR3Nff/Whats-App-Image-2025-12-18-at-20-26-32-1.jpg"},
-  {name:"Produk 101", price:12000, category:"snack", image:"https://i.ibb.co.com/B514FZXT/Whats-App-Image-2025-12-18-at-20-26-32-2.jpg"},
-  {name:"Produk 102", price:15000, category:"sembako", image:"https://i.ibb.co.com/nsxhG1Zb/Whats-App-Image-2025-12-18-at-20-26-33.jpg"},
-  {name:"Produk 103", price:35000, category:"frozen", image:"https://i.ibb.co.com/rTGFjBw/Whats-App-Image-2025-12-18-at-20-26-33-1.jpg"},
-  {name:"Produk 104", price:18000, category:"frozen", image:"https://i.ibb.co.com/kVQcKwpW/Whats-App-Image-2025-12-18-at-20-26-33-2.jpg"},
-  {name:"Produk 105", price:25000, category:"frozen", image:"https://i.ibb.co.com/5VL0WTD/Whats-App-Image-2025-12-18-at-20-26-34.jpg"},
-  {name:"Produk 106", price:12000, category:"snack", image:"https://i.ibb.co.com/xSVZVzqT/Whats-App-Image-2025-12-18-at-20-26-34-1.jpg"},
-  {name:"Produk 107", price:15000, category:"sembako", image:"https://i.ibb.co.com/B2NdYHMg/Whats-App-Image-2025-12-18-at-20-26-34-2.jpg"},
-  {name:"Produk 108", price:35000, category:"frozen", image:"https://i.ibb.co.com/MkHSMpSP/Whats-App-Image-2025-12-18-at-20-26-34-3.jpg"},
-  {name:"Produk 109", price:22000, category:"frozen", image:"https://i.ibb.co.com/why4wDfx/Whats-App-Image-2025-12-18-at-20-26-35.jpg"},
-  {name:"Produk 110", price:15000, category:"frozen", image:"https://i.ibb.co.com/wFBg0b3X/Whats-App-Image-2025-12-18-at-20-26-35-1.jpg"},
-  {name:"Produk 111", price:8000, category:"snack", image:"https://i.ibb.co.com/XZySscJZ/Whats-App-Image-2025-12-18-at-20-26-35-2.jpg"},
-  {name:"Produk 112", price:10000, category:"snack", image:"https://i.ibb.co.com/chFHJR1t/Whats-App-Image-2025-12-18-at-20-26-35-3.jpg"},
-  {name:"Produk 113", price:12000, category:"sembako", image:"https://i.ibb.co.com/ZbV3CNJ/Whats-App-Image-2025-12-18-at-20-26-36.jpg"},
-  {name:"Produk 114", price:90000, category:"sembako", image:"https://i.ibb.co.com/5hwnLgTt/Whats-App-Image-2025-12-18-at-20-26-36-1.jpg"},
-  {name:"Produk 115", price:25000, category:"sembako", image:"https://i.ibb.co.com/mVd56tfW/Whats-App-Image-2025-12-18-at-20-26-36-2.jpg"},
-  {name:"Produk 116", price:18000, category:"frozen", image:"https://i.ibb.co.com/tPwvcwn9/Whats-App-Image-2025-12-18-at-20-26-36-3.jpg"},
-  {name:"Produk 117", price:25000, category:"frozen", image:"https://i.ibb.co.com/w3zYCNK/Whats-App-Image-2025-12-18-at-20-26-37.jpg"},
-  {name:"Produk 118", price:12000, category:"snack", image:"https://i.ibb.co.com/tMpgCr35/Whats-App-Image-2025-12-18-at-20-26-37-1.jpg"},
-  {name:"Produk 119", price:15000, category:"sembako", image:"https://i.ibb.co.com/4RPgF7xp/Whats-App-Image-2025-12-18-at-20-26-37-2.jpg"},
-  {name:"Produk 120", price:35000, category:"frozen", image:"https://i.ibb.co.com/FqjqL0zd/Whats-App-Image-2025-12-18-at-20-26-37-3.jpg"},
-  {name:"Produk 121", price:22000, category:"frozen", image:"https://i.ibb.co.com/fdNydtP0/Whats-App-Image-2025-12-18-at-20-26-38.jpg"},
-  {name:"Produk 122", price:15000, category:"frozen", image:"https://i.ibb.co.com/rKtW3svk/Whats-App-Image-2025-12-18-at-20-26-38-1.jpg"},
-  {name:"Produk 123", price:8000, category:"snack", image:"https://i.ibb.co.com/7thw9y1w/Whats-App-Image-2025-12-18-at-20-26-38-2.jpg"},
-  {name:"Produk 124", price:10000, category:"snack", image:"https://i.ibb.co.com/JwpzV6JR/Whats-App-Image-2025-12-18-at-20-26-38-3.jpg"},
-  {name:"Produk 125", price:12000, category:"sembako", image:"https://i.ibb.co.com/Dg5vfwxm/Whats-App-Image-2025-12-18-at-20-26-39.jpg"},
-  {name:"Produk 126", price:90000, category:"sembako", image:"https://i.ibb.co.com/cKR7w0Bq/Whats-App-Image-2025-12-18-at-20-26-39-1.jpg"},
-  {name:"Produk 127", price:25000, category:"sembako", image:"https://i.ibb.co.com/356dQyhw/Whats-App-Image-2025-12-18-at-20-26-39-2.jpg"},
-  {name:"Produk 128", price:25000, category:"sembako", image:"https://i.ibb.co.com/sJ9NSbc9/Whats-App-Image-2025-12-18-at-20-26-40.jpg"},
-  {name:"Produk 129", price:18000, category:"frozen", image:"https://i.ibb.co.com/gLmDKfv7/Whats-App-Image-2025-12-18-at-20-26-40-1.jpg"},
-  {name:"Produk 130", price:25000, category:"frozen", image:"https://i.ibb.co.com/MxZpRwKS/Whats-App-Image-2025-12-18-at-20-26-40-2.jpg"},
-  {name:"Produk 131", price:12000, category:"snack", image:"https://i.ibb.co.com/Q7zGnFyJ/Whats-App-Image-2025-12-18-at-20-26-40-3.jpg"},
-  {name:"Produk 132", price:15000, category:"sembako", image:"https://i.ibb.co.com/qMyGC5GN/Whats-App-Image-2025-12-18-at-20-26-41.jpg"},
-  {name:"Produk 133", price:35000, category:"frozen", image:"https://i.ibb.co.com/4Qvb1w7/Whats-App-Image-2025-12-18-at-20-26-41-1.jpg"},
-  {name:"Produk 134", price:22000, category:"frozen", image:"https://i.ibb.co.com/gMCpPjxM/Whats-App-Image-2025-12-18-at-20-26-41-2.jpg"},
-  {name:"Produk 135", price:15000, category:"frozen", image:"https://i.ibb.co.com/pjfV3KtG/Whats-App-Image-2025-12-18-at-20-26-41-3.jpg"},
-  {name:"Produk 136", price:8000, category:"snack", image:"https://i.ibb.co.com/VWv0Th3B/Whats-App-Image-2025-12-18-at-20-26-42.jpg"},
-  {name:"Produk 137", price:10000, category:"snack", image:"https://i.ibb.co.com/0jQGtzsM/Whats-App-Image-2025-12-18-at-20-26-42-1.jpg"},
-  {name:"Produk 138", price:12000, category:"sembako", image:"https://i.ibb.co.com/mCn5HjhD/Whats-App-Image-2025-12-18-at-20-26-42-2.jpg"},
-  {name:"Produk 139", price:90000, category:"sembako", image:"https://i.ibb.co.com/xqZctLYp/Whats-App-Image-2025-12-18-at-20-26-42-3.jpg"},
-  {name:"Produk 140", price:25000, category:"sembako", image:"https://i.ibb.co.com/hxT8kQph/Whats-App-Image-2025-12-18-at-20-26-43.jpg"},
-  {name:"Produk 141", price:18000, category:"frozen", image:"https://i.ibb.co.com/KpcN3JYJ/Whats-App-Image-2025-12-18-at-20-26-43-1.jpg"},
-  {name:"Produk 142", price:25000, category:"frozen", image:"https://i.ibb.co.com/s9ZbvbG8/Whats-App-Image-2025-12-18-at-20-26-43-2.jpg"},
-  {name:"Produk 143", price:12000, category:"snack", image:"https://i.ibb.co.com/r29w6bP3/Whats-App-Image-2025-12-18-at-20-26-43-3.jpg"},
-  {name:"Produk 144", price:15000, category:"sembako", image:"https://i.ibb.co.com/Q3snFszD/Whats-App-Image-2025-12-18-at-20-26-44.jpg"},
-  {name:"Produk 145", price:35000, category:"frozen", image:"https://i.ibb.co.com/nqVTYxMh/Whats-App-Image-2025-12-18-at-20-26-44-1.jpg"},
-  {name:"Produk 146", price:22000, category:"frozen", image:"https://i.ibb.co.com/qYNc70RG/Whats-App-Image-2025-12-18-at-20-26-44-2.jpg"},
-  {name:"Produk 147", price:15000, category:"frozen", image:"https://i.ibb.co.com/5XD6Xwpj/Whats-App-Image-2025-12-18-at-20-26-44-3.jpg"},
-  {name:"Produk 148", price:8000, category:"snack", image:"https://i.ibb.co.com/LDZBDgGT/Whats-App-Image-2025-12-18-at-20-26-45.jpg"},
-  {name:"Produk 149", price:10000, category:"snack", image:"https://i.ibb.co.com/rGvGNgyK/Whats-App-Image-2025-12-18-at-20-26-45-1.jpg"},
-  {name:"Produk 150", price:12000, category:"sembako", image:"https://i.ibb.co.com/Q7jPXBrn/Whats-App-Image-2025-12-18-at-20-26-45-2.jpg"},
-  {name:"Produk 151", price:90000, category:"sembako", image:"https://i.ibb.co.com/bRNPrGLN/Whats-App-Image-2025-12-18-at-20-26-46.jpg"},
-  {name:"Produk 152", price:25000, category:"sembako", image:"https://i.ibb.co.com/ZRdST8rj/Whats-App-Image-2025-12-18-at-20-26-46-1.jpg"},
-  {name:"Produk 153", price:18000, category:"frozen", image:"https://i.ibb.co.com/xtK5NKXD/Whats-App-Image-2025-12-18-at-20-26-46-2.jpg"},
-  {name:"Produk 154", price:25000, category:"frozen", image:"https://i.ibb.co.com/qMhdZkKD/Whats-App-Image-2025-12-18-at-20-26-46-3.jpg"},
-  {name:"Produk 155", price:12000, category:"snack", image:"https://i.ibb.co.com/Kck4dX3Y/Whats-App-Image-2025-12-18-at-20-26-47.jpg"},
-  {name:"Produk 156", price:15000, category:"sembako", image:"https://i.ibb.co.com/nqxCncXr/Whats-App-Image-2025-12-18-at-20-26-47-1.jpg"},
-  {name:"Produk 157", price:35000, category:"frozen", image:"https://i.ibb.co.com/chyzV6pt/Whats-App-Image-2025-12-18-at-20-26-47-2.jpg"},
-  {name:"Produk 158", price:22000, category:"frozen", image:"https://i.ibb.co.com/YBCjDsj4/Whats-App-Image-2025-12-18-at-20-26-47-3.jpg"},
-  {name:"Produk 159", price:15000, category:"frozen", image:"https://i.ibb.co.com/BHVGK6YR/Whats-App-Image-2025-12-18-at-20-26-48.jpg"},
-  {name:"Produk 160", price:8000, category:"snack", image:"https://i.ibb.co.com/RpRC4FJh/Whats-App-Image-2025-12-18-at-20-26-48-1.jpg"},
-  {name:"Produk 161", price:10000, category:"snack", image:"https://i.ibb.co.com/Jj42j6zz/Whats-App-Image-2025-12-18-at-20-26-48-2.jpg"},
-  {name:"Produk 162", price:12000, category:"sembako", image:"https://i.ibb.co.com/hJJZfRzd/Whats-App-Image-2025-12-18-at-20-26-48-3.jpg"},
-  {name:"Produk 163", price:90000, category:"sembako", image:"https://i.ibb.co.com/jPV8j4K4/Whats-App-Image-2025-12-18-at-20-26-49.jpg"},
-  {name:"Produk 164", price:25000, category:"sembako", image:"https://i.ibb.co.com/TNdDt36/Whats-App-Image-2025-12-18-at-20-26-49-1.jpg"},
-  {name:"Produk 165", price:25000, category:"sembako", image:"https://i.ibb.co.com/nM5jXP8G/Whats-App-Image-2025-12-18-at-20-26-49-2.jpg"},
-  {name:"Produk 166", price:18000, category:"frozen", image:"https://i.ibb.co.com/VYFY5LJ1/Whats-App-Image-2025-12-18-at-20-26-49-3.jpg"},
-  {name:"Produk 167", price:25000, category:"frozen", image:"https://i.ibb.co.com/p8G5pFy/Whats-App-Image-2025-12-18-at-20-26-50.jpg"},
-  {name:"Produk 168", price:12000, category:"snack", image:"https://i.ibb.co.com/B5LgpcfK/Whats-App-Image-2025-12-18-at-20-26-50-1.jpg"},
-  {name:"Produk 169", price:15000, category:"sembako", image:"https://i.ibb.co.com/HDfP2ZFN/Whats-App-Image-2025-12-18-at-20-26-50-2.jpg"},
-  {name:"Produk 170", price:35000, category:"frozen", image:"https://i.ibb.co.com/vx5vM2S8/Whats-App-Image-2025-12-18-at-20-26-50-3.jpg"},
-  {name:"Produk 171", price:22000, category:"frozen", image:"https://i.ibb.co.com/Hfc7f1dv/Whats-App-Image-2025-12-18-at-20-26-51.jpg"},
-  {name:"Produk 172", price:15000, category:"frozen", image:"https://i.ibb.co.com/fYT5qmtg/Whats-App-Image-2025-12-18-at-20-26-51-1.jpg"},
-  {name:"Produk 173", price:8000, category:"snack", image:"https://i.ibb.co.com/HTBRYYJF/Whats-App-Image-2025-12-18-at-20-26-51-2.jpg"},
-  {name:"Produk 174", price:10000, category:"snack", image:"https://i.ibb.co.com/qM49zd0j/Whats-App-Image-2025-12-18-at-20-26-51-3.jpg"},
-  {name:"Produk 175", price:12000, category:"sembako", image:"https://i.ibb.co.com/q3qgv5f3/Whats-App-Image-2025-12-18-at-20-26-52.jpg"},
-  {name:"Produk 176", price:90000, category:"sembako", image:"https://i.ibb.co.com/1YRcHr4P/Whats-App-Image-2025-12-18-at-20-26-52-1.jpg"},
-  {name:"Produk 177", price:18000, category:"frozen", image:"https://i.ibb.co.com/PvQQXJJM/Whats-App-Image-2025-12-18-at-20-26-52-2.jpg"},
-  {name:"Produk 178", price:25000, category:"frozen", image:"https://i.ibb.co.com/b518Ksvm/Whats-App-Image-2025-12-18-at-20-26-53.jpg"},
-  {name:"Produk 179", price:12000, category:"snack", image:"https://i.ibb.co.com/Cpy5jKBp/Whats-App-Image-2025-12-18-at-20-26-53-1.jpg"},
-  {name:"Produk 180", price:15000, category:"sembako", image:"https://i.ibb.co.com/S7BPzzC2/Whats-App-Image-2025-12-18-at-20-26-53-2.jpg"},
-  {name:"Produk 181", price:35000, category:"frozen", image:"https://i.ibb.co.com/nZ9wwkd/Whats-App-Image-2025-12-18-at-20-26-53-3.jpg"},
-  {name:"Produk 182", price:22000, category:"frozen", image:"https://i.ibb.co.com/1Gc3Nj3J/Whats-App-Image-2025-12-18-at-20-26-54.jpg"},
-  {name:"Produk 183", price:15000, category:"frozen", image:"https://i.ibb.co.com/Fbn49R2C/Whats-App-Image-2025-12-18-at-20-26-54-1.jpg"},
-  {name:"Produk 184", price:8000, category:"snack", image:"https://i.ibb.co.com/d0Tz1mcc/Whats-App-Image-2025-12-18-at-20-26-54-2.jpg"},
-  {name:"Produk 185", price:10000, category:"snack", image:"https://i.ibb.co.com/mFXW6MR7/Whats-App-Image-2025-12-18-at-20-26-54-3.jpg"},
-  {name:"Produk 186", price:12000, category:"sembako", image:"https://i.ibb.co.com/VcDPCB7S/Whats-App-Image-2025-12-18-at-20-26-55.jpg"},
-  {name:"Produk 187", price:90000, category:"sembako", image:"https://i.ibb.co.com/pvTszjRc/Whats-App-Image-2025-12-18-at-20-26-55-1.jpg"},
-  {name:"Produk 188", price:25000, category:"sembako", image:"https://i.ibb.co.com/qzsxRpY/Whats-App-Image-2025-12-18-at-20-26-55-2.jpg"},
-  {name:"Produk 189", price:18000, category:"frozen", image:"https://i.ibb.co.com/KzwBK7f0/Whats-App-Image-2025-12-18-at-20-26-55-3.jpg"},
-  {name:"Produk 190", price:25000, category:"frozen", image:"https://i.ibb.co.com/DfjzCjJV/Whats-App-Image-2025-12-18-at-20-26-56.jpg"},
-  {name:"Produk 191", price:12000, category:"snack", image:"https://i.ibb.co.com/21KRZDfN/Whats-App-Image-2025-12-18-at-20-26-56-1.jpg"},
-  {name:"Produk 192", price:15000, category:"sembako", image:"https://i.ibb.co.com/Swkg8wrq/Whats-App-Image-2025-12-18-at-20-26-56-2.jpg"},
-  {name:"Produk 193", price:35000, category:"frozen", image:"https://i.ibb.co.com/3mq5h49s/Whats-App-Image-2025-12-18-at-20-26-57.jpg"},
-  {name:"Produk 194", price:22000, category:"frozen", image:"https://i.ibb.co.com/LhdJSDnZ/Whats-App-Image-2025-12-18-at-20-26-57-1.jpg"},
-  {name:"Produk 195", price:15000, category:"frozen", image:"https://i.ibb.co.com/23KJFVTb/Whats-App-Image-2025-12-18-at-20-26-57-2.jpg"},
-  {name:"Produk 196", price:8000, category:"snack", image:"https://i.ibb.co.com/tPsLgHpx/Whats-App-Image-2025-12-18-at-20-26-58.jpg"},
-  {name:"Produk 197", price:10000, category:"snack", image:"https://i.ibb.co.com/0jWHHFpM/Whats-App-Image-2025-12-18-at-20-26-58-1.jpg"},
-  {name:"Produk 198", price:12000, category:"sembako", image:"https://i.ibb.co.com/V01jrryb/Whats-App-Image-2025-12-18-at-20-26-58-2.jpg"},
-  {name:"Produk 199", price:90000, category:"sembako", image:"https://i.ibb.co.com/Swtddk2B/Whats-App-Image-2025-12-18-at-20-26-59.jpg"},
-  {name:"Produk 200", price:25000, category:"sembako", image:"https://i.ibb.co.com/nM3bvbPv/Whats-App-Image-2025-12-18-at-20-26-59-1.jpg"},
-  {name:"Produk 201", price:25000, category:"sembako", image:"https://i.ibb.co.com/vxzjzcgS/Whats-App-Image-2025-12-18-at-20-26-59-2.jpg"},
-  {name:"Produk 202", price:18000, category:"frozen", image:"https://i.ibb.co.com/cS3YwRtq/Whats-App-Image-2025-12-18-at-20-26-59-3.jpg"},
-  {name:"Produk 203", price:25000, category:"frozen", image:"https://i.ibb.co.com/gMkxpRvz/Whats-App-Image-2025-12-18-at-20-27-00.jpg"},
-  {name:"Produk 204", price:12000, category:"snack", image:"https://i.ibb.co.com/xtXWbb1J/Whats-App-Image-2025-12-18-at-20-27-01.jpg"},
-  {name:"Produk 205", price:15000, category:"sembako", image:"https://i.ibb.co.com/vC79NVnj/Whats-App-Image-2025-12-18-at-20-27-01-1.jpg"},
-  {name:"Produk 206", price:35000, category:"frozen", image:"https://i.ibb.co.com/Y44gfxr7/Whats-App-Image-2025-12-18-at-20-27-01-2.jpg"},
-  {name:"Produk 207", price:25000, category:"frozen", image:"https://i.ibb.co.com/s91gpFnC/Whats-App-Image-2025-12-18-at-20-27-01-3.jpg"},
-  {name:"Produk 208", price:12000, category:"snack", image:"https://i.ibb.co.com/vxPg2gjh/Whats-App-Image-2025-12-18-at-20-27-02.jpg"},
-  {name:"Produk 209", price:15000, category:"sembako", image:"https://i.ibb.co.com/gFSnch6q/Whats-App-Image-2025-12-18-at-20-27-02-1.jpg"},
-  {name:"Produk 210", price:35000, category:"frozen", image:"https://i.ibb.co.com/gFPV7Hr8/Whats-App-Image-2025-12-18-at-20-27-02-2.jpg"},
-  {name:"Produk 211", price:18000, category:"frozen", image:"https://i.ibb.co.com/Mk1CXvCh/Whats-App-Image-2025-12-18-at-20-27-03.jpg"},
-  {name:"Produk 212", price:25000, category:"frozen", image:"https://i.ibb.co.com/twsFTwCW/Whats-App-Image-2025-12-18-at-20-27-03-1.jpg"},
-  {name:"Produk 213", price:12000, category:"snack", image:"https://i.ibb.co.com/TMqYCnb3/Whats-App-Image-2025-12-18-at-20-27-03-2.jpg"},
-  {name:"Produk 214", price:15000, category:"sembako", image:"https://i.ibb.co.com/M4L7sYT/Whats-App-Image-2025-12-18-at-20-27-03-3.jpg"},
-  {name:"Produk 215", price:35000, category:"frozen", image:"https://i.ibb.co.com/BHW8wdzj/Whats-App-Image-2025-12-18-at-20-27-04.jpg"},
-  {name:"Produk 216", price:22000, category:"frozen", image:"https://i.ibb.co.com/KjrKyjM5/Whats-App-Image-2025-12-18-at-20-27-04-1.jpg"},
-  {name:"Produk 217", price:15000, category:"frozen", image:"https://i.ibb.co.com/SDSMnBts/Whats-App-Image-2025-12-18-at-20-27-04-2.jpg"},
-  {name:"Produk 218", price:8000, category:"snack", image:"https://i.ibb.co.com/7tsRrKw1/Whats-App-Image-2025-12-18-at-20-27-04-3.jpg"},
-  {name:"Produk 219", price:10000, category:"snack", image:"https://i.ibb.co.com/W4CrRvG0/Whats-App-Image-2025-12-18-at-20-27-05.jpg"},
-  {name:"Produk 220", price:12000, category:"sembako", image:"https://i.ibb.co.com/6JD7Ptnp/Whats-App-Image-2025-12-18-at-20-27-05-1.jpg"},
-  {name:"Produk 221", price:90000, category:"sembako", image:"https://i.ibb.co.com/xqkB3x07/Whats-App-Image-2025-12-18-at-20-27-05-2.jpg"},
-  {name:"Produk 222", price:25000, category:"sembako", image:"https://i.ibb.co.com/yBQ0Z7yv/Whats-App-Image-2025-12-18-at-20-27-06.jpg"},
-  {name:"Produk 223", price:18000, category:"frozen", image:"https://i.ibb.co.com/QjHkN9Hq/Whats-App-Image-2025-12-18-at-20-27-06-1.jpg"},
-  {name:"Produk 224", price:25000, category:"frozen", image:"https://i.ibb.co.com/gLhfSjFM/Whats-App-Image-2025-12-18-at-20-27-06-2.jpg"},
-  {name:"Produk 225", price:12000, category:"snack", image:"https://i.ibb.co.com/0VCqL33r/Whats-App-Image-2025-12-18-at-20-27-06-3.jpg"},
-  {name:"Produk 226", price:15000, category:"sembako", image:"https://i.ibb.co.com/KpK33DqF/Whats-App-Image-2025-12-18-at-20-27-07.jpg"},
-  {name:"Produk 227", price:35000, category:"frozen", image:"https://i.ibb.co.com/f77c9pk/Whats-App-Image-2025-12-18-at-20-27-07-1.jpg"},
-  {name:"Produk 228", price:22000, category:"frozen", image:"https://i.ibb.co.com/ksJrSyrw/Whats-App-Image-2025-12-18-at-20-27-08.jpg"},
-  {name:"Produk 229", price:15000, category:"frozen", image:"https://i.ibb.co.com/TMP6ZvNY/Whats-App-Image-2025-12-18-at-20-27-08-1.jpg"},
-  {name:"Produk 230", price:8000, category:"snack", image:"https://i.ibb.co.com/Q7FVyh9n/Whats-App-Image-2025-12-18-at-20-27-08-2.jpg"},
-  {name:"Produk 231", price:10000, category:"snack", image:"https://i.ibb.co.com/nM9XhrQY/Whats-App-Image-2025-12-18-at-20-27-08-3.jpg"},
-  {name:"Produk 232", price:12000, category:"sembako", image:"https://i.ibb.co.com/jkXhqY7B/Whats-App-Image-2025-12-18-at-20-27-09.jpg"},
-  {name:"Produk 233", price:90000, category:"sembako", image:"https://i.ibb.co.com/yF0zzHts/Whats-App-Image-2025-12-18-at-20-27-09-1.jpg"},
-  {name:"Produk 234", price:25000, category:"sembako", image:"https://i.ibb.co.com/7xQzbxTP/Whats-App-Image-2025-12-18-at-20-27-09-2.jpg"},
-  {name:"Produk 235", price:25000, category:"sembako", image:"https://i.ibb.co.com/Rk5w4tf8/Whats-App-Image-2025-12-18-at-20-27-09-3.jpg"},
-  {name:"Produk 236", price:18000, category:"frozen", image:"https://i.ibb.co.com/4nYzVJh6/Whats-App-Image-2025-12-18-at-20-27-10.jpg"},
-  {name:"Produk 237", price:25000, category:"frozen", image:"https://i.ibb.co.com/03vsK6F/Whats-App-Image-2025-12-18-at-20-27-10-1.jpg"},
-  {name:"Produk 238", price:12000, category:"snack", image:"https://i.ibb.co.com/JWjxfcRh/Whats-App-Image-2025-12-18-at-20-27-10-2.jpg"},
-  {name:"Produk 239", price:15000, category:"sembako", image:"https://i.ibb.co.com/mVJQS3pb/Whats-App-Image-2025-12-18-at-20-27-11.jpg"},
-  {name:"Produk 240", price:35000, category:"frozen", image:"https://i.ibb.co.com/0yRfMWXK/Whats-App-Image-2025-12-18-at-20-27-11-1.jpg"},
-  {name:"Produk 241", price:22000, category:"frozen", image:"https://i.ibb.co.com/Q32G31j0/Whats-App-Image-2025-12-18-at-20-27-11-2.jpg"},
-  {name:"Produk 242", price:15000, category:"frozen", image:"https://i.ibb.co.com/PZQ8QKq2/Whats-App-Image-2025-12-18-at-20-27-12.jpg"},
-  {name:"Produk 243", price:8000, category:"snack", image:"https://i.ibb.co.com/6RLjJ6LX/Whats-App-Image-2025-12-18-at-20-27-12-1.jpg"},
-  {name:"Produk 244", price:10000, category:"snack", image:"https://i.ibb.co.com/9mx6yKtL/Whats-App-Image-2025-12-18-at-20-27-12-2.jpg"},
-  {name:"Produk 245", price:12000, category:"sembako", image:"https://i.ibb.co.com/chR7gFCj/Whats-App-Image-2025-12-18-at-20-27-13.jpg"},
-  {name:"Produk 246", price:90000, category:"sembako", image:"https://i.ibb.co.com/PzCpR9K3/Whats-App-Image-2025-12-18-at-20-27-13-1.jpg"},
-  {name:"Produk 247", price:25000, category:"sembako", image:"https://i.ibb.co.com/FLzCwWgY/Whats-App-Image-2025-12-18-at-20-27-13-2.jpg"},
-  {name:"Produk 248", price:18000, category:"frozen", image:"https://i.ibb.co.com/pBZjqRhH/Whats-App-Image-2025-12-18-at-20-27-13-3.jpg"},
-  {name:"Produk 249", price:25000, category:"frozen", image:"https://i.ibb.co.com/5XRwj8KR/Whats-App-Image-2025-12-18-at-20-27-14.jpg"},
-  {name:"Produk 250", price:12000, category:"snack", image:"https://i.ibb.co.com/gbxzFbZL/Whats-App-Image-2025-12-18-at-20-27-14-1.jpg"},
-  {name:"Produk 255", price:15000, category:"sembako", image:"https://i.ibb.co.com/tTWPPFzc/Whats-App-Image-2025-12-18-at-20-27-14-2.jpg"},
-  {name:"Produk 256", price:35000, category:"frozen", image:"https://i.ibb.co.com/7NbkXZyP/Whats-App-Image-2025-12-18-at-20-27-14-3.jpg"},
-  {name:"Produk 257", price:22000, category:"frozen", image:"https://i.ibb.co.com/0prDcwsy/Whats-App-Image-2025-12-18-at-20-27-15.jpg"},
-  {name:"Produk 258", price:15000, category:"frozen", image:"https://i.ibb.co.com/ym6fPzSr/Whats-App-Image-2025-12-18-at-20-27-15-1.jpg"},
-  {name:"Produk 259", price:8000, category:"snack", image:"https://i.ibb.co.com/yFHGMpPf/Whats-App-Image-2025-12-18-at-20-27-15-2.jpg"},
-  {name:"Produk 260", price:10000, category:"snack", image:"https://i.ibb.co.com/W4DW0jWW/Whats-App-Image-2025-12-18-at-20-27-15-3.jpg"},
-  {name:"Produk 261", price:12000, category:"sembako", image:"https://i.ibb.co.com/DPb1SxSk/Whats-App-Image-2025-12-18-at-20-27-16.jpg"},
-  {name:"Produk 262", price:90000, category:"sembako", image:"https://i.ibb.co.com/MkFZV2YJ/Whats-App-Image-2025-12-18-at-20-27-16-1.jpg"},
-  {name:"Produk 263", price:25000, category:"sembako", image:"https://i.ibb.co.com/Df8ZtH2t/Whats-App-Image-2025-12-18-at-20-27-16-2.jpg"},
-  {name:"Produk 264", price:18000, category:"frozen", image:"https://i.ibb.co.com/93fqhyD4/Whats-App-Image-2025-12-18-at-20-27-17.jpg"},
-  {name:"Produk 265", price:25000, category:"frozen", image:"https://i.ibb.co.com/fGtW80Fp/Whats-App-Image-2025-12-18-at-20-27-17-1.jpg"},
-  {name:"Produk 266", price:12000, category:"snack", image:"https://i.ibb.co.com/kV5Fzjgz/Whats-App-Image-2025-12-18-at-20-27-17-2.jpg"},
-  {name:"Produk 267", price:15000, category:"sembako", image:"https://i.ibb.co.com/j9DgP2XX/Whats-App-Image-2025-12-18-at-20-27-17-3.jpg"},
-  {name:"Produk 268", price:35000, category:"frozen", image:"https://i.ibb.co.com/QvNjVDDK/Whats-App-Image-2025-12-18-at-20-27-18.jpg"},
-  {name:"Produk 269", price:22000, category:"frozen", image:"https://i.ibb.co.com/qYzD5PBQ/Whats-App-Image-2025-12-18-at-20-27-18-1.jpg"},
-  {name:"Produk 270", price:15000, category:"frozen", image:"https://i.ibb.co.com/WpFhTcq7/Whats-App-Image-2025-12-18-at-20-27-18-2.jpg"},
-  {name:"Produk 271", price:8000, category:"snack", image:"https://i.ibb.co.com/YBJc679k/Whats-App-Image-2025-12-18-at-20-27-18-3.jpg"},
-  {name:"Produk 272", price:10000, category:"snack", image:"https://i.ibb.co.com/q3msXCPv/Whats-App-Image-2025-12-18-at-20-27-19.jpg"},
-  {name:"Produk 273", price:12000, category:"sembako", image:"https://i.ibb.co.com/20PXMWqC/Whats-App-Image-2025-12-18-at-20-27-19-1.jpg"},
-  {name:"Produk 274", price:90000, category:"sembako", image:"https://i.ibb.co.com/LdzmJP6c/Whats-App-Image-2025-12-18-at-20-27-19-2.jpg"},
-  {name:"Produk 275", price:25000, category:"sembako", image:"https://i.ibb.co.com/Z1b2skYS/Whats-App-Image-2025-12-18-at-20-27-19-3.jpg"},
-  {name:"Produk 276", price:25000, category:"sembako", image:"https://i.ibb.co.com/XZYCrR1B/Whats-App-Image-2025-12-18-at-20-27-20.jpg"},
-  {name:"Produk 277", price:18000, category:"frozen", image:"https://i.ibb.co.com/62RX749/Whats-App-Image-2025-12-18-at-20-27-20-1.jpg"},
-  {name:"Produk 278", price:25000, category:"frozen", image:"https://i.ibb.co.com/YTqTFyhV/image.jpg"},
-  {name:"Produk 279", price:12000, category:"snack", image:"https://i.ibb.co.com/M5nFGrzD/Whats-App-Image-2025-12-18-at-20-41-24.jpg"},
-  {name:"Produk 280", price:15000, category:"sembako", image:"https://i.ibb.co.com/5xMnmYMR/Whats-App-Image-2025-12-18-at-20-41-25.jpg"},
-  {name:"Produk 281", price:35000, category:"frozen", image:"https://i.ibb.co.com/nqDD95QD/Whats-App-Image-2025-12-18-at-20-41-24-1.jpg"},
-  {name:"Produk 282", price:22000, category:"frozen", image:"https://i.ibb.co.com/wh18g7MT/Whats-App-Image-2025-12-18-at-20-41-25-1.jpg"},
-  {name:"Produk 283", price:15000, category:"frozen", image:"https://i.ibb.co.com/pjJr1xpd/image.jpg"},
-  {name:"Produk 284", price:8000, category:"snack", image:"https://i.ibb.co.com/3YkFb2fw/Whats-App-Image-2025-12-18-at-20-41-27.jpg"},
-  {name:"Produk 285", price:10000, category:"snack", image:"https://i.ibb.co.com/mFr2trd3/image.jpg"},
-  {name:"Produk 286", price:12000, category:"sembako", image:"https://i.ibb.co.com/DHzWV6sy/image.jpg"},
-  {name:"Produk 287", price:90000, category:"sembako", image:"https://i.ibb.co.com/1fT7vHwF/Whats-App-Image-2025-12-18-at-20-41-26.jpg"},
-  {name:"Produk 288", price:18000, category:"frozen", image:"https://i.ibb.co.com/FkCrFvMp/Whats-App-Image-2025-12-18-at-20-41-24-2.jpg"},
-  {name:"Produk 289", price:25000, category:"frozen", image:"https://i.ibb.co.com/ZtMNK6h/image.jpg"},
-  {name:"Produk 290", price:12000, category:"snack", image:"https://i.ibb.co.com/20gKqCwf/image.jpg"},
-  {name:"Produk 291", price:15000, category:"sembako", image:"https://i.ibb.co.com/7N221vkk/image.jpg"},
-  {name:"Produk 292", price:35000, category:"frozen", image:"https://i.ibb.co.com/q3h89nVY/image.jpg"},
-  {name:"Produk 293", price:22000, category:"frozen", image:"https://i.ibb.co.com/d4g1HsYQ/image.jpg"},
-  {name:"Produk 294", price:15000, category:"frozen", image:"https://i.ibb.co.com/GjR6v7w/image.jpg"},
-  {name:"Produk 295", price:8000, category:"snack", image:"https://i.ibb.co.com/Vs7tBr6/Whats-App-Image-2025-12-18-at-20-41-25-2.jpg"},
-  {name:"Produk 296", price:10000, category:"snack", image:"https://i.ibb.co.com/hFN9DH92/image.jpg"},
-  {name:"Produk 297", price:12000, category:"sembako", image:"https://i.ibb.co.com/FbRGrYNK/image.jpg"},
-  {name:"Produk 298", price:90000, category:"sembako", image:"https://i.ibb.co.com/chVCQSJM/image.jpg"},
-  {name:"Produk 299", price:25000, category:"sembako", image:"https://i.ibb.co.com/cKcqGCfk/image.jpg"},
-  {name:"Produk 300", price:18000, category:"frozen", image:"https://i.ibb.co.com/5hTLnqPf/image.jpg"},
-  {name:"Produk 301", price:25000, category:"frozen", image:"https://i.ibb.co.com/xKs4YH3h/image.jpg"},
-  {name:"Produk 302", price:12000, category:"snack", image:"https://i.ibb.co.com/fdp5MZ2t/image.jpg"},
-  {name:"Produk 303", price:15000, category:"sembako", image:"https://i.ibb.co.com/SwShLv3h/image.jpg"},
-  {name:"Produk 304", price:35000, category:"frozen", image:"https://i.ibb.co.com/fGpNw844/Whats-App-Image-2025-12-18-at-20-41-26-1.jpg"},
-  {name:"Produk 305", price:22000, category:"frozen", image:"https://i.ibb.co.com/407cxJf/image.jpg"},
-  {name:"Produk 306", price:15000, category:"frozen", image:"https://i.ibb.co.com/8L1Yv0kk/Whats-App-Image-2025-12-18-at-20-41-29.jpg"},
-  {name:"Produk 307", price:8000, category:"snack", image:"https://i.ibb.co.com/KcXwq65L/Whats-App-Image-2025-12-18-at-20-41-15.jpg"},
-  {name:"Produk 308", price:10000, category:"snack", image:"https://i.ibb.co.com/67tn84VH/Whats-App-Image-2025-12-18-at-20-41-28.jpg"},
-  {name:"Produk 309", price:12000, category:"sembako", image:"https://i.ibb.co.com/Nd41bj8W/image.jpg"},
-  {name:"Produk 310", price:90000, category:"sembako", image:"https://i.ibb.co.com/XZRP69Zw/Whats-App-Image-2025-12-18-at-20-41-28-1.jpg"},
-  {name:"Produk 311", price:25000, category:"sembako", image:"https://i.ibb.co.com/HfffzkgM/Whats-App-Image-2025-12-18-at-20-41-29-1.jpg"},
-  {name:"Produk 312", price:18000, category:"frozen", image:"https://i.ibb.co.com/9z9cDxr/image.jpg"},
-  {name:"Produk 313", price:25000, category:"frozen", image:"https://i.ibb.co.com/ZpvzWKqD/image.jpg"},
-  {name:"Produk 314", price:12000, category:"snack", image:"https://i.ibb.co.com/8DFkFPgZ/image.jpg"},
-  {name:"Produk 315", price:15000, category:"sembako", image:"https://i.ibb.co.com/vvqPgwNk/Whats-App-Image-2025-12-18-at-20-41-29-2.jpg"},
-  {name:"Produk 316", price:35000, category:"frozen", image:"https://i.ibb.co.com/mnsGSM2/Whats-App-Image-2025-12-18-at-20-41-24-3.jpg"},
-  {name:"Produk 317", price:22000, category:"frozen", image:"https://i.ibb.co.com/Gvsc2zPv/image.jpg"},
-  {name:"Produk 318", price:15000, category:"frozen", image:"https://i.ibb.co.com/Qvw5Wq53/image.jpg"},
-  {name:"Produk 319", price:8000, category:"snack", image:"https://i.ibb.co.com/jBYXp29/image.jpg"},
-  {name:"Produk 320", price:10000, category:"snack", image:"https://i.ibb.co.com/8nDJzCXD/Whats-App-Image-2025-12-18-at-20-41-27-1.jpg"},
-  {name:"Produk 321", price:12000, category:"sembako", image:"https://i.ibb.co.com/WNQQVdn7/Whats-App-Image-2025-12-18-at-20-41-26-2.jpg"},
-  {name:"Produk 322", price:90000, category:"sembako", image:"https://i.ibb.co.com/23xtMNHp/Whats-App-Image-2025-12-18-at-20-41-27-2.jpg"},
-  {name:"Produk 323", price:25000, category:"sembako", image:"https://i.ibb.co.com/Kxsfx73y/image.jpg"},
-  {name:"Produk 324", price:18000, category:"frozen", image:"https://i.ibb.co.com/0y5LG38c/Whats-App-Image-2025-12-18-at-20-41-25-3.jpg"},
-  {name:"Produk 325", price:25000, category:"frozen", image:"https://i.ibb.co.com/mC5kzWS7/image.jpg"},
-  {name:"Produk 326", price:12000, category:"snack", image:"https://i.ibb.co.com/gF60sdpf/image.jpg"},
-  {name:"Produk 327", price:15000, category:"sembako", image:"https://i.ibb.co.com/vvPh743Q/Whats-App-Image-2025-12-18-at-20-41-28-2.jpg"},
-  {name:"Produk 328", price:35000, category:"frozen", image:"https://i.ibb.co.com/DDYsXYCT/image.jpg"},
-  {name:"Produk 329", price:22000, category:"frozen", image:"https://i.ibb.co.com/cXSVNjgS/Whats-App-Image-2025-12-18-at-20-41-27-3.jpg"},
-  {name:"Produk 330", price:15000, category:"frozen", image:"https://i.ibb.co.com/HfbXj6M8/Whats-App-Image-2025-12-18-at-20-41-28-3.jpg"},
-  {name:"Produk 331", price:8000, category:"snack", image:"https://i.ibb.co.com/WpcfssDT/image.jpg"}
+  { name: "Produk1", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HJf1606daY.jpeg" },
+  { name: "Produk2", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/vlmU7775PEU.jpeg" },
+  { name: "Produk3", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/jdi7021XsY.jpeg" },
+  { name: "Produk4", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/usM2020SI.jpeg" },
+  { name: "Produk5", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/iSRH5320NB.jpeg" },
+  { name: "Produk6", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/FZ7201L.jpeg" },
+  { name: "Produk7", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NIgH4994v.jpeg" },
+  { name: "Produk8", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/zu9285gHI.jpeg" },
+  { name: "Produk9", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qoKF7642Wfo.jpeg" },
+  { name: "Produk10", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/nOS4044vc.jpeg" },
+  { name: "Produk11", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/LTa3301mY.jpeg" },
+  { name: "Produk12", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/AFQE9629mU.jpeg" },
+  { name: "Produk13", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ze5546jM.jpeg" },
+  { name: "Produk14", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SWth7305iqs.jpeg" },
+  { name: "Produk15", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/nSzK7705Y.jpeg" },
+  { name: "Produk16", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vcO7353Iv.jpeg" },
+  { name: "Produk17", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/YPi6776NYE.jpeg" },
+  { name: "Produk18", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NSfm9660PX.jpeg" },
+  { name: "Produk19", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/wxb3426jjw.jpeg" },
+  { name: "Produk20", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jKEt3114XOU.jpeg" },
+  { name: "Produk21", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mf7204kpc.jpeg" },
+  { name: "Produk22", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ndpr3672vlo.jpeg" },
+  { name: "Produk23", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IBf7426r.jpeg" },
+  { name: "Produk24", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jAEd4888Iao.jpeg" },
+  { name: "Produk25", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/akp2471Udw.jpeg" },
+  { name: "Produk26", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/i2545Fmo.jpeg" },
+  { name: "Produk27", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/DGRG1395hE.jpeg" },
+  { name: "Produk28", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/fdqI9124mg.jpeg" },
+  { name: "Produk29", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uRUK6159C.jpeg" },
+  { name: "Produk30", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/wHz7341CfA.jpeg" },
+  { name: "Produk31", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xsdH2531Ss.jpeg" },
+  { name: "Produk32", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QE1622RTY.jpeg" },
+  { name: "Produk33", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/nmb8944lX.jpeg" },
+  { name: "Produk34", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/HI1009FQ.jpeg" },
+  { name: "Produk35", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ijx5611JQ.jpeg" },
+  { name: "Produk36", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mcH4152f.jpeg" },
+  { name: "Produk37", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OcI8085ck.jpeg" },
+  { name: "Produk38", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RBU2829VQ.jpeg" },
+  { name: "Produk39", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/yGP7450yY.jpeg" },
+  { name: "Produk40", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RIvm3181vM.jpeg" },
+  { name: "Produk41", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hUGH6764AHg.jpeg" },
+  { name: "Produk42", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lvZl2984LcQ.jpeg" },
+  { name: "Produk43", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/kRe3567eA.jpeg" },
+  { name: "Produk44", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/PIHk3334E.jpeg" },
+  { name: "Produk45", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/TrrS6999A.jpeg" },
+  { name: "Produk46", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/r8763Dg.jpeg" },
+  { name: "Produk47", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qYtb3037oKA.jpeg" },
+  { name: "Produk48", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tCDG5579eIA.jpeg" },
+  { name: "Produk49", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/iXkB7493Ks.jpeg" },
+  { name: "Produk50", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qQa3943xNg.jpeg" },
+  { name: "Produk51", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ggi5581OfI.jpeg" },
+  { name: "Produk52", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/zbm3095gJc.jpeg" },
+  { name: "Produk53", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QmSA1157pA.jpeg" },
+  { name: "Produk54", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vS8920IrQ.jpeg" },
+  { name: "Produk55", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IVz4425YLs.jpeg" },
+  { name: "Produk56", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/CAfB9638LY.jpeg" },
+  { name: "Produk57", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jNj9125UW.jpeg" },
+  { name: "Produk58", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MCb7889nbI.jpeg" },
+  { name: "Produk59", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ayqQ4265Im.jpeg" },
+  { name: "Produk60", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NeON1839TaI.jpeg" },
+  { name: "Produk61", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xHqm6430LE.jpeg" },
+  { name: "Produk62", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UXt6072PuA.jpeg" },
+  { name: "Produk63", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OQz6789CY.jpeg" },
+  { name: "Produk64", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/IYX4703Hxk.jpeg" },
+  { name: "Produk65", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/FPgD3827tso.jpeg" },
+  { name: "Produk66", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qwxr9570egg.jpeg" },
+  { name: "Produk67", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lXU5800czY.jpeg" },
+  { name: "Produk68", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lIo6526KJ.jpeg" },
+  { name: "Produk69", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lKE7538yLk.jpeg" },
+  { name: "Produk70", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/WUAR1430dIk.jpeg" },
+  { name: "Produk71", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Akx7090KJc.jpeg" },
+  { name: "Produk72", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mnsF1415cfQ.jpeg" },
+  { name: "Produk73", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ALn1933P.jpeg" },
+  { name: "Produk74", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ScIN4276Flk.jpeg" },
+  { name: "Produk75", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ZgId7622oyM.jpeg" },
+  { name: "Produk76", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jMNr6822So.jpeg" },
+  { name: "Produk77", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/WeFN5207FY.jpeg" },
+  { name: "Produk78", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jIk4511Lmo.jpeg" },
+  { name: "Produk79", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/PXp4990VOs.jpeg" },
+  { name: "Produk80", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/BlY7411bnY.jpeg" },
+  { name: "Produk81", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HgFt9058XBw.jpeg" },
+  { name: "Produk82", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NAPH8645SBk.jpeg" },
+  { name: "Produk83", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/XnSf1775mFc.jpeg" },
+  { name: "Produk84", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OFZ4544gzA.jpeg" },
+  { name: "Produk85", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mom4169AGg.jpeg" },
+  { name: "Produk86", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RLor3455sOY.jpeg" },
+  { name: "Produk87", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GggU1557jcs.jpeg" },
+  { name: "Produk88", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gGDM5158XU.jpeg" },
+  { name: "Produk89", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mzyc9012zEI.jpeg" },
+  { name: "Produk90", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MRau5919wG.jpeg" },
+  { name: "Produk91", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/BZGX5046jT.jpeg" },
+  { name: "Produk92", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MHC3823Hag.jpeg" },
+  { name: "Produk93", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/bpO3047SuI.jpeg" },
+  { name: "Produk94", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/L1534xc.jpeg" },
+  { name: "Produk95", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/aEP2771TtU.jpeg" },
+  { name: "Produk96", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/Ep1740aw.jpeg" },
+  { name: "Produk97", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/fvB8427eg.jpeg" },
+  { name: "Produk98", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OUse1319lM.jpeg" },
+  { name: "Produk99", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ytc5888TE.jpeg" },
+  { name: "Produk100", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/CUo8118TzU.jpeg" },
+  { name: "Produk101", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/avY6099dHw.jpeg" },
+  { name: "Produk102", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UV1185Gp.jpeg" },
+  { name: "Produk103", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/oZo6446tP.jpeg" },
+  { name: "Produk104", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ir7426WIk.jpeg" },
+  { name: "Produk105", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OuL6575yKk.jpeg" },
+  { name: "Produk106", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uj1801oa.jpeg" },
+  { name: "Produk107", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uRy2679vk.jpeg" },
+  { name: "Produk108", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eMN4079t.jpeg" },
+  { name: "Produk109", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HTu5254Qg.jpeg" },
+  { name: "Produk110", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ugJL6338J.jpeg" },
+  { name: "Produk111", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Prc5329AUA.jpeg" },
+  { name: "Produk112", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lJC6565lh.jpeg" },
+  { name: "Produk113", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/BOU8819qqQ.jpeg" },
+  { name: "Produk114", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NXL6824Ew.jpeg" },
+  { name: "Produk115", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/pSMp1356cs.jpeg" },
+  { name: "Produk116", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/V9319loE.jpeg" },
+  { name: "Produk117", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qGrS3421AaI.jpeg" },
+  { name: "Produk118", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ffE9213tW.jpeg" },
+  { name: "Produk119", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/icAX5977fU.jpeg" },
+  { name: "Produk120", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aqFH2308xU.jpeg" },
+  { name: "Produk121", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/YWb4138zg.jpeg" },
+  { name: "Produk122", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jgt8103FY.jpeg" },
+  { name: "Produk123", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Gju8063gp.jpeg" },
+  { name: "Produk124", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Dn7394rRc.jpeg" },
+  { name: "Produk125", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UHbg4717JSI.jpeg" },
+  { name: "Produk126", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/HWAr6144sUE.jpeg" },
+  { name: "Produk127", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/cBaj9064ho.jpeg" },
+  { name: "Produk128", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Oxw7314QL.jpeg" },
+  { name: "Produk129", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/oYZ8276bXU.jpeg" },
+  { name: "Produk130", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/FkN5375uv.jpeg" },
+  { name: "Produk131", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ot9366qrY.jpeg" },
+  { name: "Produk132", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VGve9099QZk.jpeg" },
+  { name: "Produk133", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Hgqu6433GMw.jpeg" },
+  { name: "Produk134", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aMY6358Nbw.jpeg" },
+  { name: "Produk135", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/LcW1265Lmg.jpeg" },
+  { name: "Produk136", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NXK8556iLo.jpeg" },
+  { name: "Produk137", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/sI8392woo.jpeg" },
+  { name: "Produk138", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QAfw5757WfU.jpeg" },
+  { name: "Produk139", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mt9927mxg.jpeg" },
+  { name: "Produk140", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/dOS1607PfM.jpeg" },
+  { name: "Produk141", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VrrT3635Wxc.jpeg" },
+  { name: "Produk142", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Xagy2196ns.jpeg" },
+  { name: "Produk143", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VBy9424w.jpeg" },
+  { name: "Produk144", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QdfF4630TlU.jpeg" },
+  { name: "Produk145", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/In4219ECI.jpeg" },
+  { name: "Produk146", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Vi4276wA.jpeg" },
+  { name: "Produk147", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/JZGf1447qxs.jpeg" },
+  { name: "Produk148", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aaXL9939c.jpeg" },
+  { name: "Produk149", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xSkS9956VN.jpeg" },
+  { name: "Produk150", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/StLE1483LI.jpeg" },
+  { name: "Produk151", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MrQ1732hqE.jpeg" },
+  { name: "Produk152", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HkDD1902WY.jpeg" },
+  { name: "Produk153", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/LA1037Ebk.jpeg" },
+  { name: "Produk154", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/izhN4072Ko.jpeg" },
+  { name: "Produk155", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MAbh3249XR.jpeg" },
+  { name: "Produk156", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VFd1476tAE.jpeg" },
+  { name: "Produk157", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/NOo9769JJc.jpeg" },
+  { name: "Produk158", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/vXnd2520co.jpeg" },
+  { name: "Produk159", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Iu2012SDw.jpeg" },
+  { name: "Produk160", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IAOa8807Hs.jpeg" },
+  { name: "Produk161", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RcWN3849bw.jpeg" },
+  { name: "Produk162", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/JQh2592tE.jpeg" },
+  { name: "Produk163", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mnt4975UYw.jpeg" },
+  { name: "Produk164", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tKJt2931wi.jpeg" },
+  { name: "Produk165", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ozpv9641DvY.jpeg" },
+  { name: "Produk166", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QRb8916HmU.jpeg" },
+  { name: "Produk167", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/DntM9544xcY.jpeg" },
+  { name: "Produk168", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/PxTZ5618qMI.jpeg" },
+  { name: "Produk169", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eXh5689caQ.jpeg" },
+  { name: "Produk170", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gL3096ZU.jpeg" },
+  { name: "Produk171", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ki5720Q.jpeg" },
+  { name: "Produk172", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ni5649vVg.jpeg" },
+  { name: "Produk173", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vlTG2616XW.jpeg" },
+  { name: "Produk174", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eE6964CIY.jpeg" },
+  { name: "Produk175", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mg2458Oso.jpeg" },
+  { name: "Produk176", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mj3855xs.jpeg" },
+  { name: "Produk177", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aZQq1418PTE.jpeg" },
+  { name: "Produk178", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/abom5755viQ.jpeg" },
+  { name: "Produk179", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OTAa7926Aw.jpeg" },
+  { name: "Produk180", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OIE9434tE.jpeg" },
+  { name: "Produk181", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/rck3438YMY.jpeg" },
+  { name: "Produk182", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vvK4342uhU.jpeg" },
+  { name: "Produk183", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hWoB5017jcA.jpeg" },
+  { name: "Produk184", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IZRC5071MO.jpeg" },
+  { name: "Produk185", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/bs9539UTA.jpeg" },
+  { name: "Produk186", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ReP8140cuM.jpeg" },
+  { name: "Produk187", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GeO7406E.jpeg" },
+  { name: "Produk188", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/aYzz4343GhM.jpeg" },
+  { name: "Produk189", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/lmPa8533Hlk.jpeg" },
+  { name: "Produk190", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Pg4128Ng.jpeg" },
+  { name: "Produk191", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/DTe6194SW.jpeg" },
+  { name: "Produk192", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/TptQ8299vIU.jpeg" },
+  { name: "Produk193", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/PQW9269peA.jpeg" },
+  { name: "Produk194", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QGPM5678oI.jpeg" },
+  { name: "Produk195", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NekA2876mk.jpeg" },
+  { name: "Produk196", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/go2854Ocs.jpeg" },
+  { name: "Produk197", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hzVS1772TU.jpeg" },
+  { name: "Produk198", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Kz5768suU.jpeg" },
+  { name: "Produk199", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UZqg5041Tj.jpeg" },
+  { name: "Produk200", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/EtSN4255sM.jpeg" },
+  { name: "Produk201", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ovvN7686rWE.jpeg" },
+  { name: "Produk202", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uirX8267aA.jpeg" },
+  { name: "Produk203", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/JgFx3928w.jpeg" },
+  { name: "Produk204", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/TgL4561BnM.jpeg" },
+  { name: "Produk205", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QB6514zE.jpeg" },
+  { name: "Produk206", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ORFc5349UX.jpeg" },
+  { name: "Produk207", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ODS5488Lwo.jpeg" },
+  { name: "Produk208", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RVH6326O.jpeg" },
+  { name: "Produk209", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/pEr1708Ds.jpeg" },
+  { name: "Produk210", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/pmeu6317eT.jpeg" },
+  { name: "Produk211", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tYpf6213fc.jpeg" },
+  { name: "Produk212", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/KOv9160xs.jpeg" },
+  { name: "Produk213", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/As3960Eic.jpeg" },
+  { name: "Produk214", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/bDu4880UaY.jpeg" },
+  { name: "Produk215", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/CiuV2048zY.jpeg" },
+  { name: "Produk216", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GNJ6181sdw.jpeg" },
+  { name: "Produk217", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/TcF8375o.jpeg" },
+  { name: "Produk218", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eu8833skg.jpeg" },
+  { name: "Produk219", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/mhJ5306Uc.jpeg" },
+  { name: "Produk220", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/ruK9280gN.jpeg" },
+  { name: "Produk221", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xLOT5602B.jpeg" },
+  { name: "Produk222", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/cKqD9449JGA.jpeg" },
+  { name: "Produk223", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VgVv4228dMY.jpeg" },
+  { name: "Produk224", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hjYg3291Hdo.jpeg" },
+  { name: "Produk225", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RpyN1717bIo.jpeg" },
+  { name: "Produk226", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ZEC6567hg.jpeg" },
+  { name: "Produk227", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lcW7822gBk.jpeg" },
+  { name: "Produk228", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hlVK2296V.jpeg" },
+  { name: "Produk229", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/XXyU4535dQ.jpeg" },
+  { name: "Produk230", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mnga4321Bc.jpeg" },
+  { name: "Produk231", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/zVGU7401VGU.jpeg" },
+  { name: "Produk232", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vVdp4039dI.jpeg" },
+  { name: "Produk233", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VsJ7447aM.jpeg" },
+  { name: "Produk234", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jwh2175mg.jpeg" },
+  { name: "Produk235", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Aul7350Scc.jpeg" },
+  { name: "Produk236", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SY4585XSs.jpeg" },
+  { name: "Produk237", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QKTc8291oY.jpeg" },
+  { name: "Produk238", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lrvk7324xAA.jpeg" },
+  { name: "Produk239", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SAky3690x.jpeg" },
+  { name: "Produk240", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/dQor5440XU.jpeg" },
+  { name: "Produk241", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/J1053cY.jpeg" },
+  { name: "Produk242", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/rkX4804gc.jpeg" },
+  { name: "Produk243", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ggM2824qA.jpeg" },
+  { name: "Produk244", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/iDC1524Q.jpeg" },
+  { name: "Produk245", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/AzE6379HG.jpeg" },
+  { name: "Produk246", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/t1718eQ.jpeg" },
+  { name: "Produk247", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ese6842BRk.jpeg" },
+  { name: "Produk248", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IQb6760Wt.jpeg" },
+  
+  { name: "Produk249", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ytR2495Mz.jpeg" },
+  { name: "Produk250", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/ZKMx6650pZI.jpeg" },
+  { name: "Produk251", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/IpU3392kJk.jpeg" },
+  { name: "Produk252", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/oERF4675DdE.jpeg" },
+  { name: "Produk253", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NPAe5363oY.jpeg" },
+  { name: "Produk254", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Bn7732raA.jpeg" },
+  { name: "Produk255", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/LqXL7388GY.jpeg" },
+  { name: "Produk256", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UCxj3746yUM.jpeg" },
+  { name: "Produk257", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SfYt4067Tjc.jpeg" },
+  { name: "Produk258", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hRFZ9776l.jpeg" },
+  { name: "Produk259", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MA5461QM.jpeg" },
+  { name: "Produk260", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SiC5129TN.jpeg" },
+  { name: "Produk261", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SwK9279nuQ.jpeg" },
+  { name: "Produk262", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xLm5380MxY.jpeg" },
+  { name: "Produk263", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tE6020is.jpeg" },
+  { name: "Produk264", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ze9382iDw.jpeg" },
+  { name: "Produk265", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vrPQ7178g.jpeg" },
+  { name: "Produk266", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SLq5189Jpg.jpeg" },
+  { name: "Produk267", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/cJjL9655Uk.jpeg" },
+  { name: "Produk268", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HOTi9928hI.jpeg" },
+  { name: "Produk269", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/CPnQ3882Og.jpeg" },
+  { name: "Produk270", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/sH5011aX.jpeg" },
+  { name: "Produk271", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aR2538vGM.jpeg" },
+  { name: "Produk272", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IbxW8812ozM.jpeg" },
+  { name: "Produk273", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ATk9061FWM.jpeg" },
+  { name: "Produk274", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QiNe4923wUU.jpeg" },
+  { name: "Produk275", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ste3477DeM.jpeg" },
+  { name: "Produk276", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lut1059zsw.jpeg" },
+  { name: "Produk277", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/umSb9713zQ.jpeg" },
+  { name: "Produk278", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/zZGa9831k.jpeg" },
+  { name: "Produk279", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MWgJ7625EbY.jpeg" },
+  { name: "Produk280", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Llwp8000j.jpeg" },
+  { name: "Produk281", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/owld5632V.jpeg" },
+  { name: "Produk282", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/mQx5651OQ.jpeg" },
+  { name: "Produk283", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/H6227ofc.jpeg" },
+  { name: "Produk284", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/upwQ4259gH.jpeg" },
+  { name: "Produk285", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gwe3522ClA.jpeg" },
+  { name: "Produk286", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MpH5263J.jpeg" },
+  { name: "Produk287", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GuLp4993jRQ.jpeg" },
+  { name: "Produk288", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gKFG3369iA.jpeg" },
+  { name: "Produk289", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/FdJ8213XxA.jpeg" },
+  { name: "Produk290", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Wxb1828LQ.jpeg" },
+  { name: "Produk291", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GTK7549mIg.jpeg" },
+  { name: "Produk292", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tWFL8075Vs.jpeg" },
+  { name: "Produk293", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/JZB6811UfA.jpeg" },
+  { name: "Produk294", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tJ4108jxs.jpeg" },
+  { name: "Produk295", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Jj2643Y.jpeg" },
+  { name: "Produk296", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/DUCm9285PVY.jpeg" },
+  { name: "Produk297", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hlx3671ar.jpeg" },
+  { name: "Produk298", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gpJ8279qzE.jpeg" },
+  { name: "Produk299", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MVel2716gKI.jpeg" },
+  { name: "Produk300", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Vxu9246N.jpeg" },
+  { name: "Produk301", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SBv7480EoY.jpeg" },
+  { name: "Produk302", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/FqI9649o.jpeg" },
+  { name: "Produk303", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/sAl6004b.jpeg" },
+  { name: "Produk304", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/BamU3475Ns.jpeg" },
+  { name: "Produk305", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/nUT2855OA.jpeg" },
+  { name: "Produk306", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tzr7548ds.jpeg" },
+  { name: "Produk307", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/WDTI7966rk.jpeg" },
+  { name: "Produk308", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ih6456Glg.jpeg" },
+  { name: "Produk309", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uLFV4869hSA.jpeg" },
+  { name: "Produk310", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NA3920RQ.jpeg" },
+  { name: "Produk311", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hsYj4324uhM.jpeg" },
+  { name: "Produk312", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/I4416GsU.jpeg" },
+  { name: "Produk313", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/hGQO2685RY.jpeg" },
+  { name: "Produk314", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HRzE4935iu.jpeg" },
+  { name: "Produk315", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ndXs3430FY.jpeg" },
+  { name: "Produk316", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/cGsG9649ak.jpeg" },
+  { name: "Produk317", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/bAW2669SKQ.jpeg" },
+  { name: "Produk318", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/kQ7673XA.jpeg" },
+  { name: "Produk319", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/XyYo5409Sv.jpeg" },
+  { name: "Produk320", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/figu9829Pjw.jpeg" },
+  { name: "Produk321", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eYiE3594gpM.jpeg" },
+  { name: "Produk322", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NXR6263ceY.jpeg" },
+  { name: "Produk323", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gmm7752YhE.jpeg" },
+  { name: "Produk324", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Bgfs8245QM.jpeg" },
+  { name: "Produk325", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ANro2827o.jpeg" }
 ];
 
+// Generate Automation produk
 const products = [];
-for (let i = 0; i < 324; i++) {
+for (let i = 0; i < 325; i++) {
     const item = baseData[i % baseData.length];
     products.push({
         name: `${item.name} #${i + 1}`,
-        price: item.price,
+        price: item.price + (i * 10),
         category: item.category,
-        image: item.image
+        image: item.image,
+        weight: item.weight
     });
 }
 
 let itemsToShow = 12;
 const productList = document.getElementById("product-list");
-const sortSelect = document.getElementById("SortBy");
 const showAllBtn = document.getElementById("showAllBtn");
-const categoryBoxes = document.querySelectorAll("input[name='category']");
-const resetFilterBtn = document.getElementById("resetFilter");
+const noProducts = document.getElementById("no-products");
+
+function resetPaginationAndRender() {
+    itemsToShow = 12;
+    renderProducts();
+}
 
 function renderProducts() {
     let filtered = [...products];
-    const activeCategories = Array.from(categoryBoxes).filter(c => c.checked).map(c => c.value);
-    
-    if (activeCategories.length > 0) {
-        filtered = filtered.filter(p => activeCategories.includes(p.category));
+
+    // SEARCH
+    const keyword = document.getElementById("searchInput").value.toLowerCase();
+    if (keyword) {
+        filtered = filtered.filter(p => p.name.toLowerCase().includes(keyword));
     }
 
-    const sortValue = sortSelect.value;
-    if (sortValue === "price-asc") filtered.sort((a,b)=>a.price-b.price);
-    if (sortValue === "price-desc") filtered.sort((a,b)=>b.price-a.price);
-    if (sortValue === "name-asc") filtered.sort((a,b)=>a.name.localeCompare(b.name));
-    if (sortValue === "name-desc") filtered.sort((a,b)=>b.name.localeCompare(a.name));
+    // CATEGORY
+    const activeCats = Array.from(document.querySelectorAll("input[name='category']:checked")).map(c => c.value);
+    if (activeCats.length > 0) {
+        filtered = filtered.filter(p => activeCats.includes(p.category));
+    }
 
-    const visibleProducts = filtered.slice(0, itemsToShow);
+    // SORT
+    const sortVal = document.getElementById("SortBy").value;
+    if (sortVal === "price-asc") filtered.sort((a,b) => a.price - b.price);
+    if (sortVal === "price-desc") filtered.sort((a,b) => b.price - a.price);
+    if (sortVal === "name-asc") filtered.sort((a,b) => a.name.localeCompare(b.name));
+
+    const visible = filtered.slice(0, itemsToShow);
     productList.innerHTML = "";
-    
-    if (visibleProducts.length === 0) {
-        productList.innerHTML = `<li class="col-span-full text-center py-10 text-zinc-400">Produk tidak ditemukan...</li>`;
-    }
 
-    visibleProducts.forEach(p=>{
-        productList.innerHTML += `
-            <li class="group flex flex-col rounded-2xl border border-zinc-100 bg-white p-2 shadow-sm transition-all hover:shadow-xl cursor-pointer"
-                onclick="window.open('https://wa.me/6285716786682?text=Halo%20Admin%20Lariz,%20saya%20mau%20beli%20${encodeURIComponent(p.name)}','_blank')">
-                <div class="overflow-hidden rounded-xl bg-zinc-100 aspect-square">
-                    <img src="${p.image}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" />
-                </div>
-                <div class="p-2">
-                    <span class="text-[9px] font-black uppercase text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded-full">${p.category}</span>
-                    <h3 class="text-xs sm:text-sm font-bold mt-2 text-zinc-900 group-hover:text-yellow-600 truncate uppercase">${p.name}</h3>
-                    <p class="text-sm font-black text-zinc-900 mt-1">Rp ${p.price.toLocaleString("id-ID")}</p>
-                    <button class="w-full mt-3 py-2 bg-zinc-900 text-white text-[10px] font-bold rounded-lg group-hover:bg-yellow-500 transition-colors uppercase tracking-widest">Pesan</button>
-                </div>
-            </li>`;
-    });
-    
-    showAllBtn.style.display = (itemsToShow >= filtered.length) ? "none" : "inline-block";
+    if (visible.length === 0) {
+        noProducts.classList.remove("hidden");
+        showAllBtn.style.display = "none";
+    } else {
+        noProducts.classList.add("hidden");
+        visible.forEach(p => {
+            const waLink = `https://wa.me/6285716786682?text=Halo%20Admin,%20saya%20order:%0A*${encodeURIComponent(p.name)}*`;
+            productList.innerHTML += `
+                <li class="group bg-white rounded-3xl border border-zinc-200 p-2 shadow-sm hover:shadow-xl hover:border-yellow-400 transition-all cursor-pointer overflow-hidden" onclick="window.open('${waLink}','_blank')">
+                    <div class="aspect-square rounded-2xl overflow-hidden bg-zinc-100 relative">
+                        <div class="absolute top-2 right-2 bg-black/50 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-lg font-bold">${p.weight}g</div>
+                        <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-3 text-center lg:text-left">
+                        <span class="text-[8px] font-black bg-yellow-100 text-yellow-700 px-2 py-1 rounded-md uppercase">${p.category}</span>
+                        <h3 class="mt-2 text-sm font-bold text-zinc-900 truncate uppercase">${p.name}</h3>
+                        <p class="text-sm font-black text-zinc-900 mt-1">Rp ${p.price.toLocaleString('id-ID')}</p>
+                        <button class="w-full mt-3 py-2 bg-zinc-900 text-white text-[9px] font-black uppercase tracking-widest rounded-xl group-hover:bg-yellow-500 transition-colors">Beli</button>
+                    </div>
+                </li>`;
+        });
+        showAllBtn.style.display = itemsToShow >= filtered.length ? "none" : "inline-block";
+    }
 }
 
 showAllBtn.addEventListener("click", () => { itemsToShow += 24; renderProducts(); });
-resetFilterBtn.addEventListener("click", () => {
-    categoryBoxes.forEach(c => c.checked = false);
-    sortSelect.value = "none";
-    itemsToShow = 12; 
-    renderProducts();
+document.getElementById("resetFilter").addEventListener("click", () => {
+    document.querySelectorAll("input[name='category']").forEach(c => c.checked = false);
+    document.getElementById("SortBy").value = "none";
+    document.getElementById("searchInput").value = "";
+    resetPaginationAndRender();
 });
 
-// Jalankan render pertama kali
 renderProducts();
 </script>
-
 
 
    <!--  FEATURES  -->
@@ -998,7 +1017,7 @@ renderProducts();
 <style>
 .whatsapp-float {
   position: fixed;
-  bottom: 95px; /* posisi sesuai request */
+  bottom: 95px; 
   right: 20px;
   z-index: 9999;
   text-decoration: none;
@@ -1044,7 +1063,7 @@ renderProducts();
 
 
 
-<!-- Chatbase Chatbot -->
+<!-- AI ASSISTANT -->
 <script>
 (function(){
   if(!window.chatbase||window.chatbase("getState")!=="initialized"){
@@ -1062,7 +1081,7 @@ renderProducts();
   const onLoad=function(){
     const script=document.createElement("script");
     script.src="https://www.chatbase.co/embed.min.js";
-    script.id="z_NkG2rZtbIiE306_sSgT"; // <-- ini ID Chatbot lu
+    script.id="z_NkG2rZtbIiE306_sSgT"; // <-- ID
     script.domain="www.chatbase.co";
     document.body.appendChild(script)
   };
