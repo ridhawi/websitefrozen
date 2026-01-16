@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>Lariz Frozen Food & Snack</title>
 </head>
 <body>
 
-  
 
     <!--  PROMOTION  -->
 <div class="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
@@ -26,7 +25,7 @@
   </div>
   <div class="flex flex-1 justify-end">
     <button type="button" class="-m-3 p-3 focus-visible:-outline-offset-4">
-      <span class="sr-only">Dismiss</span
+      <span class="sr-only">Dismiss</span>
       <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 text-gray-900">
         <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
       </svg>
@@ -93,9 +92,9 @@
     </div>
   </div>
 
-      <!--  KATALOG PRODUK  -->
+       <!--  KATALOG PRODUK  -->
 
-<section id="katalog" class="bg-white py-12">
+</section> <section id="katalog" class="bg-white py-12">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header class="mb-12 text-center">
             <h2 class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-yellow-500 to-yellow-700 bg-clip-text text-transparent uppercase tracking-tighter italic">
@@ -185,414 +184,397 @@
 <script>
 // MASTER DATA
 const baseData = [
-  { name: "Produk1", price: 25000, category: "frozen", weight: 500, image: "https://i.ibb.co.com/hFJWfdRp/1.jpg" },
-  { name: "Produk2", price: 12000, category: "snack", weight: 250, image: "https://i.ibb.co.com/SwW5nbbm/2.jpg" },
-  { name: "Produk3", price: 15000, category: "sembako", weight: 1000, image: "https://i.ibb.co.com/4nYkxvYL/3.jpg" },
-  { name: "Produk4", price: 35000, category: "frozen", weight: 500, image: "https://i.ibb.co.com/9HvPDdQ4/4.jpg" },
-  { name: "Produk5", price: 35000, category: "frozen", weight: 500, image: "https://i.ibb.co.com/Xf2XhLkz/5.jpg" },
-  { name: "Produk6", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/FZ7201L.jpeg" },
-  { name: "Produk7", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NIgH4994v.jpeg" },
-  { name: "Produk8", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/zu9285gHI.jpeg" },
-  { name: "Produk9", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qoKF7642Wfo.jpeg" },
-  { name: "Produk10", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/nOS4044vc.jpeg" },
-  { name: "Produk11", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/LTa3301mY.jpeg" },
-  { name: "Produk12", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/AFQE9629mU.jpeg" },
-  { name: "Produk13", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ze5546jM.jpeg" },
-  { name: "Produk14", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SWth7305iqs.jpeg" },
-  { name: "Produk15", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/nSzK7705Y.jpeg" },
-  { name: "Produk16", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vcO7353Iv.jpeg" },
-  { name: "Produk17", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/YPi6776NYE.jpeg" },
-  { name: "Produk18", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NSfm9660PX.jpeg" },
-  { name: "Produk19", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/wxb3426jjw.jpeg" },
-  { name: "Produk20", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jKEt3114XOU.jpeg" },
-  { name: "Produk21", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mf7204kpc.jpeg" },
-  { name: "Produk22", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ndpr3672vlo.jpeg" },
-  { name: "Produk23", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IBf7426r.jpeg" },
-  { name: "Produk24", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jAEd4888Iao.jpeg" },
-  { name: "Produk25", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/akp2471Udw.jpeg" },
-  { name: "Produk26", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/i2545Fmo.jpeg" },
-  { name: "Produk27", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/DGRG1395hE.jpeg" },
-  { name: "Produk28", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/fdqI9124mg.jpeg" },
-  { name: "Produk29", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uRUK6159C.jpeg" },
-  { name: "Produk30", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/wHz7341CfA.jpeg" },
-  { name: "Produk31", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xsdH2531Ss.jpeg" },
-  { name: "Produk32", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QE1622RTY.jpeg" },
-  { name: "Produk33", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/nmb8944lX.jpeg" },
-  { name: "Produk34", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/HI1009FQ.jpeg" },
-  { name: "Produk35", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ijx5611JQ.jpeg" },
-  { name: "Produk36", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mcH4152f.jpeg" },
-  { name: "Produk37", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OcI8085ck.jpeg" },
-  { name: "Produk38", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RBU2829VQ.jpeg" },
-  { name: "Produk39", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/yGP7450yY.jpeg" },
-  { name: "Produk40", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RIvm3181vM.jpeg" },
-  { name: "Produk41", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hUGH6764AHg.jpeg" },
-  { name: "Produk42", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lvZl2984LcQ.jpeg" },
-  { name: "Produk43", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/kRe3567eA.jpeg" },
-  { name: "Produk44", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/PIHk3334E.jpeg" },
-  { name: "Produk45", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/TrrS6999A.jpeg" },
-  { name: "Produk46", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/r8763Dg.jpeg" },
-  { name: "Produk47", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qYtb3037oKA.jpeg" },
-  { name: "Produk48", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tCDG5579eIA.jpeg" },
-  { name: "Produk49", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/iXkB7493Ks.jpeg" },
-  { name: "Produk50", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qQa3943xNg.jpeg" },
-  { name: "Produk51", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ggi5581OfI.jpeg" },
-  { name: "Produk52", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/zbm3095gJc.jpeg" },
-  { name: "Produk53", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QmSA1157pA.jpeg" },
-  { name: "Produk54", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vS8920IrQ.jpeg" },
-  { name: "Produk55", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IVz4425YLs.jpeg" },
-  { name: "Produk56", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/CAfB9638LY.jpeg" },
-  { name: "Produk57", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jNj9125UW.jpeg" },
-  { name: "Produk58", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MCb7889nbI.jpeg" },
-  { name: "Produk59", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ayqQ4265Im.jpeg" },
-  { name: "Produk60", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NeON1839TaI.jpeg" },
-  { name: "Produk61", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xHqm6430LE.jpeg" },
-  { name: "Produk62", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UXt6072PuA.jpeg" },
-  { name: "Produk63", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OQz6789CY.jpeg" },
-  { name: "Produk64", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/IYX4703Hxk.jpeg" },
-  { name: "Produk65", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/FPgD3827tso.jpeg" },
-  { name: "Produk66", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qwxr9570egg.jpeg" },
-  { name: "Produk67", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lXU5800czY.jpeg" },
-  { name: "Produk68", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lIo6526KJ.jpeg" },
-  { name: "Produk69", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lKE7538yLk.jpeg" },
-  { name: "Produk70", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/WUAR1430dIk.jpeg" },
-  { name: "Produk71", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Akx7090KJc.jpeg" },
-  { name: "Produk72", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mnsF1415cfQ.jpeg" },
-  { name: "Produk73", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ALn1933P.jpeg" },
-  { name: "Produk74", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ScIN4276Flk.jpeg" },
-  { name: "Produk75", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ZgId7622oyM.jpeg" },
-  { name: "Produk76", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jMNr6822So.jpeg" },
-  { name: "Produk77", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/WeFN5207FY.jpeg" },
-  { name: "Produk78", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jIk4511Lmo.jpeg" },
-  { name: "Produk79", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/PXp4990VOs.jpeg" },
-  { name: "Produk80", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/BlY7411bnY.jpeg" },
-  { name: "Produk81", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HgFt9058XBw.jpeg" },
-  { name: "Produk82", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NAPH8645SBk.jpeg" },
-  { name: "Produk83", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/XnSf1775mFc.jpeg" },
-  { name: "Produk84", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OFZ4544gzA.jpeg" },
-  { name: "Produk85", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mom4169AGg.jpeg" },
-  { name: "Produk86", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RLor3455sOY.jpeg" },
-  { name: "Produk87", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GggU1557jcs.jpeg" },
-  { name: "Produk88", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gGDM5158XU.jpeg" },
-  { name: "Produk89", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mzyc9012zEI.jpeg" },
-  { name: "Produk90", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MRau5919wG.jpeg" },
-  { name: "Produk91", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/BZGX5046jT.jpeg" },
-  { name: "Produk92", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MHC3823Hag.jpeg" },
-  { name: "Produk93", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/bpO3047SuI.jpeg" },
-  { name: "Produk94", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/L1534xc.jpeg" },
-  { name: "Produk95", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/aEP2771TtU.jpeg" },
-  { name: "Produk96", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/Ep1740aw.jpeg" },
-  { name: "Produk97", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/fvB8427eg.jpeg" },
-  { name: "Produk98", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OUse1319lM.jpeg" },
-  { name: "Produk99", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ytc5888TE.jpeg" },
-  { name: "Produk100", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/CUo8118TzU.jpeg" },
-  { name: "Produk101", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/avY6099dHw.jpeg" },
-  { name: "Produk102", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UV1185Gp.jpeg" },
-  { name: "Produk103", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/oZo6446tP.jpeg" },
-  { name: "Produk104", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ir7426WIk.jpeg" },
-  { name: "Produk105", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OuL6575yKk.jpeg" },
-  { name: "Produk106", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uj1801oa.jpeg" },
-  { name: "Produk107", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uRy2679vk.jpeg" },
-  { name: "Produk108", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eMN4079t.jpeg" },
-  { name: "Produk109", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HTu5254Qg.jpeg" },
-  { name: "Produk110", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ugJL6338J.jpeg" },
-  { name: "Produk111", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Prc5329AUA.jpeg" },
-  { name: "Produk112", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lJC6565lh.jpeg" },
-  { name: "Produk113", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/BOU8819qqQ.jpeg" },
-  { name: "Produk114", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NXL6824Ew.jpeg" },
-  { name: "Produk115", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/pSMp1356cs.jpeg" },
-  { name: "Produk116", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/V9319loE.jpeg" },
-  { name: "Produk117", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/qGrS3421AaI.jpeg" },
-  { name: "Produk118", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ffE9213tW.jpeg" },
-  { name: "Produk119", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/icAX5977fU.jpeg" },
-  { name: "Produk120", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aqFH2308xU.jpeg" },
-  { name: "Produk121", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/YWb4138zg.jpeg" },
-  { name: "Produk122", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jgt8103FY.jpeg" },
-  { name: "Produk123", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Gju8063gp.jpeg" },
-  { name: "Produk124", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Dn7394rRc.jpeg" },
-  { name: "Produk125", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UHbg4717JSI.jpeg" },
-  { name: "Produk126", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/HWAr6144sUE.jpeg" },
-  { name: "Produk127", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/cBaj9064ho.jpeg" },
-  { name: "Produk128", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Oxw7314QL.jpeg" },
-  { name: "Produk129", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/oYZ8276bXU.jpeg" },
-  { name: "Produk130", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/FkN5375uv.jpeg" },
-  { name: "Produk131", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ot9366qrY.jpeg" },
-  { name: "Produk132", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VGve9099QZk.jpeg" },
-  { name: "Produk133", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Hgqu6433GMw.jpeg" },
-  { name: "Produk134", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aMY6358Nbw.jpeg" },
-  { name: "Produk135", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/LcW1265Lmg.jpeg" },
-  { name: "Produk136", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NXK8556iLo.jpeg" },
-  { name: "Produk137", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/sI8392woo.jpeg" },
-  { name: "Produk138", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QAfw5757WfU.jpeg" },
-  { name: "Produk139", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mt9927mxg.jpeg" },
-  { name: "Produk140", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/dOS1607PfM.jpeg" },
-  { name: "Produk141", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VrrT3635Wxc.jpeg" },
-  { name: "Produk142", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Xagy2196ns.jpeg" },
-  { name: "Produk143", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VBy9424w.jpeg" },
-  { name: "Produk144", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QdfF4630TlU.jpeg" },
-  { name: "Produk145", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/In4219ECI.jpeg" },
-  { name: "Produk146", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Vi4276wA.jpeg" },
-  { name: "Produk147", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/JZGf1447qxs.jpeg" },
-  { name: "Produk148", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aaXL9939c.jpeg" },
-  { name: "Produk149", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xSkS9956VN.jpeg" },
-  { name: "Produk150", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/StLE1483LI.jpeg" },
-  { name: "Produk151", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MrQ1732hqE.jpeg" },
-  { name: "Produk152", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HkDD1902WY.jpeg" },
-  { name: "Produk153", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/LA1037Ebk.jpeg" },
-  { name: "Produk154", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/izhN4072Ko.jpeg" },
-  { name: "Produk155", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MAbh3249XR.jpeg" },
-  { name: "Produk156", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VFd1476tAE.jpeg" },
-  { name: "Produk157", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/NOo9769JJc.jpeg" },
-  { name: "Produk158", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/vXnd2520co.jpeg" },
-  { name: "Produk159", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Iu2012SDw.jpeg" },
-  { name: "Produk160", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IAOa8807Hs.jpeg" },
-  { name: "Produk161", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RcWN3849bw.jpeg" },
-  { name: "Produk162", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/JQh2592tE.jpeg" },
-  { name: "Produk163", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mnt4975UYw.jpeg" },
-  { name: "Produk164", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tKJt2931wi.jpeg" },
-  { name: "Produk165", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ozpv9641DvY.jpeg" },
-  { name: "Produk166", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QRb8916HmU.jpeg" },
-  { name: "Produk167", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/DntM9544xcY.jpeg" },
-  { name: "Produk168", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/PxTZ5618qMI.jpeg" },
-  { name: "Produk169", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eXh5689caQ.jpeg" },
-  { name: "Produk170", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gL3096ZU.jpeg" },
-  { name: "Produk171", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ki5720Q.jpeg" },
-  { name: "Produk172", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ni5649vVg.jpeg" },
-  { name: "Produk173", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vlTG2616XW.jpeg" },
-  { name: "Produk174", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eE6964CIY.jpeg" },
-  { name: "Produk175", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mg2458Oso.jpeg" },
-  { name: "Produk176", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/mj3855xs.jpeg" },
-  { name: "Produk177", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aZQq1418PTE.jpeg" },
-  { name: "Produk178", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/abom5755viQ.jpeg" },
-  { name: "Produk179", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OTAa7926Aw.jpeg" },
-  { name: "Produk180", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/OIE9434tE.jpeg" },
-  { name: "Produk181", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/rck3438YMY.jpeg" },
-  { name: "Produk182", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vvK4342uhU.jpeg" },
-  { name: "Produk183", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hWoB5017jcA.jpeg" },
-  { name: "Produk184", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IZRC5071MO.jpeg" },
-  { name: "Produk185", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/bs9539UTA.jpeg" },
-  { name: "Produk186", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ReP8140cuM.jpeg" },
-  { name: "Produk187", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GeO7406E.jpeg" },
-  { name: "Produk188", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/aYzz4343GhM.jpeg" },
-  { name: "Produk189", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/lmPa8533Hlk.jpeg" },
-  { name: "Produk190", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Pg4128Ng.jpeg" },
-  { name: "Produk191", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/DTe6194SW.jpeg" },
-  { name: "Produk192", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/TptQ8299vIU.jpeg" },
-  { name: "Produk193", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/PQW9269peA.jpeg" },
-  { name: "Produk194", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QGPM5678oI.jpeg" },
-  { name: "Produk195", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NekA2876mk.jpeg" },
-  { name: "Produk196", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/go2854Ocs.jpeg" },
-  { name: "Produk197", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hzVS1772TU.jpeg" },
-  { name: "Produk198", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Kz5768suU.jpeg" },
-  { name: "Produk199", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UZqg5041Tj.jpeg" },
-  { name: "Produk200", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/EtSN4255sM.jpeg" },
-  { name: "Produk201", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ovvN7686rWE.jpeg" },
-  { name: "Produk202", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uirX8267aA.jpeg" },
-  { name: "Produk203", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/JgFx3928w.jpeg" },
-  { name: "Produk204", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/TgL4561BnM.jpeg" },
-  { name: "Produk205", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QB6514zE.jpeg" },
-  { name: "Produk206", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ORFc5349UX.jpeg" },
-  { name: "Produk207", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ODS5488Lwo.jpeg" },
-  { name: "Produk208", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RVH6326O.jpeg" },
-  { name: "Produk209", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/pEr1708Ds.jpeg" },
-  { name: "Produk210", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/pmeu6317eT.jpeg" },
-  { name: "Produk211", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tYpf6213fc.jpeg" },
-  { name: "Produk212", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/KOv9160xs.jpeg" },
-  { name: "Produk213", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/As3960Eic.jpeg" },
-  { name: "Produk214", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/bDu4880UaY.jpeg" },
-  { name: "Produk215", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/CiuV2048zY.jpeg" },
-  { name: "Produk216", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GNJ6181sdw.jpeg" },
-  { name: "Produk217", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/TcF8375o.jpeg" },
-  { name: "Produk218", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eu8833skg.jpeg" },
-  { name: "Produk219", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/mhJ5306Uc.jpeg" },
-  { name: "Produk220", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/ruK9280gN.jpeg" },
-  { name: "Produk221", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xLOT5602B.jpeg" },
-  { name: "Produk222", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/cKqD9449JGA.jpeg" },
-  { name: "Produk223", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VgVv4228dMY.jpeg" },
-  { name: "Produk224", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hjYg3291Hdo.jpeg" },
-  { name: "Produk225", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/RpyN1717bIo.jpeg" },
-  { name: "Produk226", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ZEC6567hg.jpeg" },
-  { name: "Produk227", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lcW7822gBk.jpeg" },
-  { name: "Produk228", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hlVK2296V.jpeg" },
-  { name: "Produk229", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/XXyU4535dQ.jpeg" },
-  { name: "Produk230", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Mnga4321Bc.jpeg" },
-  { name: "Produk231", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/zVGU7401VGU.jpeg" },
-  { name: "Produk232", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vVdp4039dI.jpeg" },
-  { name: "Produk233", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/VsJ7447aM.jpeg" },
-  { name: "Produk234", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/jwh2175mg.jpeg" },
-  { name: "Produk235", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Aul7350Scc.jpeg" },
-  { name: "Produk236", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SY4585XSs.jpeg" },
-  { name: "Produk237", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QKTc8291oY.jpeg" },
-  { name: "Produk238", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lrvk7324xAA.jpeg" },
-  { name: "Produk239", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SAky3690x.jpeg" },
-  { name: "Produk240", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/dQor5440XU.jpeg" },
-  { name: "Produk241", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/J1053cY.jpeg" },
-  { name: "Produk242", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/rkX4804gc.jpeg" },
-  { name: "Produk243", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ggM2824qA.jpeg" },
-  { name: "Produk244", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/iDC1524Q.jpeg" },
-  { name: "Produk245", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/AzE6379HG.jpeg" },
-  { name: "Produk246", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/t1718eQ.jpeg" },
-  { name: "Produk247", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ese6842BRk.jpeg" },
-  { name: "Produk248", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IQb6760Wt.jpeg" },
-  { name: "Produk249", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ytR2495Mz.jpeg" },
-  { name: "Produk250", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/ZKMx6650pZI.jpeg" },
-  { name: "Produk251", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/IpU3392kJk.jpeg" },
-  { name: "Produk252", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/oERF4675DdE.jpeg" },
-  { name: "Produk253", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NPAe5363oY.jpeg" },
-  { name: "Produk254", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Bn7732raA.jpeg" },
-  { name: "Produk255", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/LqXL7388GY.jpeg" },
-  { name: "Produk256", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/UCxj3746yUM.jpeg" },
-  { name: "Produk257", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SfYt4067Tjc.jpeg" },
-  { name: "Produk258", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hRFZ9776l.jpeg" },
-  { name: "Produk259", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MA5461QM.jpeg" },
-  { name: "Produk260", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SiC5129TN.jpeg" },
-  { name: "Produk261", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SwK9279nuQ.jpeg" },
-  { name: "Produk262", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/xLm5380MxY.jpeg" },
-  { name: "Produk263", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tE6020is.jpeg" },
-  { name: "Produk264", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ze9382iDw.jpeg" },
-  { name: "Produk265", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/vrPQ7178g.jpeg" },
-  { name: "Produk266", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SLq5189Jpg.jpeg" },
-  { name: "Produk267", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/cJjL9655Uk.jpeg" },
-  { name: "Produk268", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HOTi9928hI.jpeg" },
-  { name: "Produk269", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/CPnQ3882Og.jpeg" },
-  { name: "Produk270", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/sH5011aX.jpeg" },
-  { name: "Produk271", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/aR2538vGM.jpeg" },
-  { name: "Produk272", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/IbxW8812ozM.jpeg" },
-  { name: "Produk273", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ATk9061FWM.jpeg" },
-  { name: "Produk274", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/QiNe4923wUU.jpeg" },
-  { name: "Produk275", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ste3477DeM.jpeg" },
-  { name: "Produk276", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/lut1059zsw.jpeg" },
-  { name: "Produk277", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/umSb9713zQ.jpeg" },
-  { name: "Produk278", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/zZGa9831k.jpeg" },
-  { name: "Produk279", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MWgJ7625EbY.jpeg" },
-  { name: "Produk280", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Llwp8000j.jpeg" },
-  { name: "Produk281", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/owld5632V.jpeg" },
-  { name: "Produk282", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/mQx5651OQ.jpeg" },
-  { name: "Produk283", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/H6227ofc.jpeg" },
-  { name: "Produk284", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/upwQ4259gH.jpeg" },
-  { name: "Produk285", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gwe3522ClA.jpeg" },
-  { name: "Produk286", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MpH5263J.jpeg" },
-  { name: "Produk287", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GuLp4993jRQ.jpeg" },
-  { name: "Produk288", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gKFG3369iA.jpeg" },
-  { name: "Produk289", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/FdJ8213XxA.jpeg" },
-  { name: "Produk290", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Wxb1828LQ.jpeg" },
-  { name: "Produk291", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/GTK7549mIg.jpeg" },
-  { name: "Produk292", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tWFL8075Vs.jpeg" },
-  { name: "Produk293", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/JZB6811UfA.jpeg" },
-  { name: "Produk294", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tJ4108jxs.jpeg" },
-  { name: "Produk295", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Jj2643Y.jpeg" },
-  { name: "Produk296", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/DUCm9285PVY.jpeg" },
-  { name: "Produk297", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hlx3671ar.jpeg" },
-  { name: "Produk298", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gpJ8279qzE.jpeg" },
-  { name: "Produk299", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/MVel2716gKI.jpeg" },
-  { name: "Produk300", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Vxu9246N.jpeg" },
-  { name: "Produk301", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/SBv7480EoY.jpeg" },
-  { name: "Produk302", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/FqI9649o.jpeg" },
-  { name: "Produk303", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/sAl6004b.jpeg" },
-  { name: "Produk304", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/BamU3475Ns.jpeg" },
-  { name: "Produk305", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/nUT2855OA.jpeg" },
-  { name: "Produk306", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/tzr7548ds.jpeg" },
-  { name: "Produk307", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/WDTI7966rk.jpeg" },
-  { name: "Produk308", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Ih6456Glg.jpeg" },
-  { name: "Produk309", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/uLFV4869hSA.jpeg" },
-  { name: "Produk310", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NA3920RQ.jpeg" },
-  { name: "Produk311", price: 25000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/hsYj4324uhM.jpeg" },
-  { name: "Produk312", price: 12000, category: "snack", weight: 250, image: "https://i.imghippo.com/files/I4416GsU.jpeg" },
-  { name: "Produk313", price: 15000, category: "sembako", weight: 1000, image: "https://i.imghippo.com/files/hGQO2685RY.jpeg" },
-  { name: "Produk314", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/HRzE4935iu.jpeg" },
-  { name: "Produk315", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ndXs3430FY.jpeg" },
-  { name: "Produk316", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/cGsG9649ak.jpeg" },
-  { name: "Produk317", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/bAW2669SKQ.jpeg" },
-  { name: "Produk318", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/kQ7673XA.jpeg" },
-  { name: "Produk319", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/XyYo5409Sv.jpeg" },
-  { name: "Produk320", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/figu9829Pjw.jpeg" },
-  { name: "Produk321", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/eYiE3594gpM.jpeg" },
-  { name: "Produk322", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/NXR6263ceY.jpeg" },
-  { name: "Produk323", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/gmm7752YhE.jpeg" },
-  { name: "Produk324", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/Bgfs8245QM.jpeg" },
-  { name: "Produk325", price: 35000, category: "frozen", weight: 500, image: "https://i.imghippo.com/files/ANro2827o.jpeg" }
+  { name: "Kentang Balado JJ", price: 11000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/hFJWfdRp/1.jpg" },
+  { name: "Berondong Jagung", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/SwW5nbbm/2.jpg" },
+  { name: "Pang Pang", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/4nYkxvYL/3.jpg" },
+  { name: "UBM Vanilla", price: 10000, category: "Snack", weight: 230, image: "https://i.ibb.co.com/9HvPDdQ4/4.jpg" },
+  { name: "Samosa", price: 15000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/Xf2XhLkz/5.jpg" },
+  { name: "GEM", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/JjF7P1ty/6.jpg" },
+  { name: "UBM Cokelat", price: 10000, category: "Snack", weight: 230, image: "https://i.ibb.co.com/v6jBtRPy/7.jpg" },
+  { name: "Sale Pisang Jari", price: 15000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/NdrnvCbM/8.jpg" },
+  { name: "Kripik Pisang Nangka", price: 11000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/gMZfTYWJ/9.jpg" },
+  { name: "Makaroni Asin", price: 8000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/G4NNGspB/10.jpg" },
+  { name: "Makaroni Pedas", price: 8000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/GQHbBvd5/11.jpg" },
+  { name: "Rengginang", price: 16000, category: "Snack", weight: 0, image: "https://i.ibb.co.com/DPpnb48D/12.jpg" },
+  { name: "Steak Keju TES", price: 15000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/MxdQYHFM/13.jpg" },
+  { name: "Astor Asten Coklat", price: 13000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/s95D3sB2/14.jpg" },
+  { name: "Pilus", price: 11500, category: "Snack", weight: 250, image: "https://i.ibb.co.com/kgG0wvnj/17.jpg" },
+  { name: "Comring", price: 8000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/R42dm8zB/18.jpg" },
+  { name: "Kerupuk Tempe", price: 14000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/Rns6fx0/19.jpg" },
+  { name: "Kuaci Rebo", price: 23000, category: "Snack", weight: 150, image: "https://i.ibb.co.com/FqC9wjx3/20.jpg" },
+  { name: "Astor Morena Cokelat", price: 8000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/spRQtWV6/21.jpg" },
+  { name: "Kacang Atom", price: 13000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/JRkVDbkJ/22.jpg" },
+  { name: "Steak Sunvita", price: 5000, category: "Snack", weight: 125, image: "https://i.ibb.co.com/bjZscdzL/23.jpg" },
+  { name: "Steak Bawang Gege", price: 11000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/G43QXK0w/24.jpg" },
+  { name: "Keremes Ubi", price: 14000, category: "Snack", weight: 0, image: "https://i.ibb.co.com/SwVCL8vy/25.jpg" },
+  { name: "Produk26", price: 35000, category: "Frozen", weight: 500, image: "https://i.ibb.co.com/7NVhS5jv/26.jpg" },
+  { name: "Kacang Bawang Ashoka", price: 20000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/HfnhZZWX/27.jpg" },
+  { name: "Jagung Marninng", price: 8000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/rXkXgfj/28.jpg" },
+  { name: "Bagelen Lily", price: 16000, category: "Snack", weight: 0, image: "https://i.ibb.co.com/4ZGpgxVx/29.jpg" },
+  { name: "Makaroni Bantat Asin", price: 9000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/39Rqs1vF/30.jpg" },
+  { name: "Kuping Gajah Cokelat", price: 7500, category: "Snack", weight: 250, image: "https://i.ibb.co.com/35K2GyB8/31.jpg" },
+  { name: "Comring Ori", price: 7500, category: "Snack", weight: 250, image: "https://i.ibb.co.com/sJsmRRxk/32.jpg" },
+  { name: "Singkong Rujak", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/60QNvW01/33.jpg" },
+  { name: "Kacang Kulit Sangrai", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/DgwK1bpd/34.jpg" },
+  { name: "UBM Squarepuff", price: 10000, category: "Snack", weight: 280, image: "https://i.ibb.co.com/Fq7VqQpq/35.jpg" },
+  { name: "Kacang Koro Ori", price: 9000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/PvycKRyV/36.jpg" },
+  { name: "Astor Stiko Vanilla", price: 13000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/gbBf35Mm/37.jpg" },
+  { name: "Twist Jagung Panggang", price: 13000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/V08nFvPn/38.jpg" },
+  { name: "Steak Keju Tes", price: 15000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/PzGCYTb6/39.jpg" },
+  { name: "Sumpia", price: 9000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/DDzcChDX/40.jpg" },
+  { name: "Gurilem", price: 12000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/nMQfmhxv/41.jpg" },
+  { name: "Kerupuk Koin", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/mrL2VmZj/42.jpg" },
+  { name: "Bagelen Jireh Keju", price: 21000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/TDZ3z04B/43.jpg" },
+  { name: "Kembang Goyang", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.back/QFbSCvfP/44.jpg" },
+  { name: "Makaroni Bantat Pedas", price: 9000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/TrrS6999A.jpeg" }, // Using fallback from data
+  { name: "Keripik Pisang Gepok", price: 13000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/ksm7rZcT/46.jpg" },
+  { name: "Usus Ayam Crispy", price: 13000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/DH0qSQG8/47.jpg" },
+  { name: "Kripik Singkok Ori", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/5Xnh4DWx/48.jpg" },
+  { name: "Tempe Sagu", price: 14000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/VWPFrVKy/49.jpg" },
+  { name: "Jipang Beras", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/prhzQW7J/50.jpg" },
+  { name: "Pilus Rujak", price: 12000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/8LNdfb2G/51.jpg" },
+  { name: "Sale Pisang Lidah", price: 10000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/kg4HxtRk/52.jpg" },
+  { name: "Permen Jahe", price: 9500, category: "Snack", weight: 250, image: "https://i.ibb.co.com/V0R33PVQ/53.jpg" },
+  { name: "Twist BBQ", price: 14000, category: "Snack", weight: 250, image: "https://i.ibb.co.com/35Xx9czM/54.jpg" },
+  { name: "Gula Gunung Madu", price: 19000, category: "Sembako", weight: 1000, image: "https://i.ibb.co.com/tpxssdmy/55.jpg" },
+  { name: "Gulaku Premium", price: 20000, category: "Sembako", weight: 1000, image: "https://i.ibb.co.com/Lz1qjBr6/56.jpg" },
+  { name: "Gula Tepung Putri", price: 7000, category: "Sembako", weight: 250, image: "https://i.ibb.co.com/r2jg0SL6/57.jpg" },
+  { name: "Gambar Sama Kaya diatas", price: 35000, category: "Sembako", weight: 500, image: "https://i.ibb.co.com/r2jg0SL6/57.jpg" },
+  { name: "Tepung Beras Rosebrand", price: 8000, category: "Sembako", weight: 500, image: "https://i.ibb.co.com/HTcDKWP6/59.jpg" },
+  { name: "Terigu Segitiga Biru ", price: 13000, category: "Sembako", weight: 1000, image: "https://i.ibb.co.com/8nYyXyJM/60.jpg" },
+  { name: "Terigu Segitiga Biru", price: 6500, category: "Sembako", weight: 500, image: "https://i.ibb.co.com/GQXY7x9f/61.jpg" },
+  { name: "Tepung Teigu Cakra Kembar", price: 15000, category: "Sembako", weight: 1000, image: "https://i.ibb.co.com/bjSXxBfR/62.jpg" },
+  { name: "Forvita", price: 7000, category: "Sembako", weight: 200, image: "https://i.ibb.co.com/FL79VqF7/63.jpg" },
+  { name: "Blueband Five In One", price: 8000, category: "Sembako", weight: 190, image: "https://i.ibb.co.com/xdNghxL/64.jpg" },
+  { name: "Blueband Serbaguna", price: 10000, category: "Sembako", weight: 200, image: "https://i.ibb.co.com/gFMCCsRW/65.jpg" },
+  { name: "Puding Susu Nutrigel Cokelat", price: 11000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/ynTTmtqn/66.jpg" },
+  { name: "Puding Susu Nutrigel Cappucino", price: 11000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/vxgKDwhw/67.jpg" },
+  { name: "Filma", price: 7000, category: "Sembako", weight: 200, image: "https://i.ibb.co.com/wZJStJk8/68.jpg" },
+  { name: "Palmia Royal", price: 10000, category: "Sembako", weight: 200, image: "https://i.ibb.co.com/3ymZnTZf/69.jpg" },
+  { name: "Puding Susu Nutrigel Mangga", price: 11000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/27Sfn0sf/70.jpg" },
+  { name: "Pondan Pancake Mix Ori", price: 10500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/MkJ6QmPB/71.jpg" },
+  { name: "Pondan Pancake Keju", price: 13000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/Fk0wF58G/72.jpg" },
+  { name: "Silky Puding Mom's Recipe Alvocado", price: 10000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/LhXLY4zv/73.jpg" },
+  { name: "Silky Puding Mom's Recipe Taro", price: 10000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/fdY7D5G4/74.jpg" },
+  { name: "Silky Puding Mom's Recipe Lychee", price: 10000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/dwM5M8wZ/75.jpg" },
+  { name: "Silky Puding Mom's Recipe Korean Strawberry", price: 10000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/TDTMh0Pt/76.jpg" },
+  { name: "Silky Puding Mom's Recipe Chocolate ", price: 10000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/QFVMmBK7/77.jpg" },
+  { name: "Silky Puding Mom's Recipe Bubble Gum", price: 10000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/sJtwCzqP/78.jpg" },
+  { name: "Susu Frisian Flag Putih", price: 10000, category: "Sembako", weight: 240, image: "https://i.ibb.co.com/NdCq2YYH/79.jpg" },
+  { name: "Pondan Whip Cream", price: 19000, category: "Sembako", weight: 100, image: "https://i.ibb.co.com/8LhGyNFS/80.jpg" },
+  { name: "Haan Whipi Cream", price: 38000, category: "Sembako", weight: 200, image: "https://i.ibb.co.com/2YtWFBgn/81.jpg" },
+  { name: "Silky Puding Mom's Recipe Matcha", price: 10000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/ksKTMXbL/82.jpg" },
+  { name: "Susu Kental Manis Cap Enakk Cokelat", price: 14000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/FkVTnT1G/83.jpg" },
+  { name: "Susu Kental Manis Cap Enakk Putih", price: 14000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/zHsRF3wL/84.jpg" },
+  { name: "Susu Evaporasi F&N", price: 20000, category: "Sembako", weight: 380, image: "https://i.ibb.co.com/ym8VzJKV/85.jpg" },
+  { name: "Susu Frisian Flag Cokelat", price: 10000, category: "Sembako", weight: 240, image: "https://i.ibb.co.com/r2qmyb6D/86.jpg" },
+  { name: "Sarden Ajib", price: 19000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/M5G8nrDj/87.jpg" },
+  { name: "Sarden ABC", price: 12000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/Y4cMfNdC/88.jpg" },
+  { name: "Ajib Kornet Daging Sapi", price: 22000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/BHfVVXYP/89.jpg" },
+  { name: "Pronas Kornet Chicken ", price: 22000, category: "Sembako", weight: 198, image: "https://i.ibb.co.com/9m48BG5Q/90.jpg" },
+  { name: "Botan Mackrel ", price: 40000, category: "Sembako", weight: 425, image: "https://i.ibb.co.com/SwJTpY6t/91.jpg" },
+  { name: "Botan Mackrel", price: 19000, category: "Sembako", weight: 155, image: "https://i.ibb.co.com/YT0t0gP1/92.jpg" },
+  { name: "Kecap Bango", price: 24000, category: "Sembako", weight: "700ml", image: "https://i.ibb.co.com/FLmBpL17/93.jpg" },
+  { name: "Kecap ABC Sachet", price: 2000, category: "Sembako", weight: "60ml", image: "https://i.ibb.co.com/39ntmY4m/94.jpg" },
+  { name: "Kecap Bango Kecil", price: 10000, category: "Sembako", weight: "262ml", image: "https://i.ibb.co.com/fzHBtrQR/95.jpg" },
+  { name: "Kecap Sedap", price: 2000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/XZjYjSvN/96.jpg" },
+  { name: "Kecap ABC Besar", price: 25000, category: "Sembako", weight: 825, image: "https://i.ibb.co.com/TBQXBM5w/97.jpg" },
+  { name: "Minyak Fitri 200", price: 5000, category: "Sembako", weight: "200ml", image: "https://i.ibb.co.com/3tBwXys/98.jpg" },
+  { name: "Minyak Fitri 400", price: 9500, category: "Sembako", weight: "400ml", image: "https://i.ibb.co.com/gZz60Sz9/99.jpg" },
+  { name: "Minyak Goreng Cemara", price: 20500, category: "Sembako", weight: "1lt", image: "https://i.ibb.co.com/N6G2kJYt/100.jpg" },
+  { name: "MINYAK GORENG SOFIA", price: 42000, category: "Sembako", weight: "2L", image: "https://i.ibb.co.com/XZ7YzKGG/101.jpg" },
+  { name: "MINYAK GORENG TROPICAL", price: 42000, category: "Sembako", weight: "2L", image: "https://i.ibb.co.com/C3YWN2Nm/102.jpg" },
+  { name: "MINYAK GORENG SANIA", price: 42000, category: "Sembako", weight: "2L", image: "https://i.ibb.co.com/6RJ9fztG/103.jpg" },
+  { name: "BAWANG PUTIH GORENG PREMIUM", price: 17000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/7m892z1/104.jpg" },
+  { name: "GIMBORI SEAWEED", price: 4500, category: "Sembako", weight: "3Gr", image: "https://i.ibb.co.com/TBsZr21N/105.jpg" },
+  { name: "GIMBORI CRISPY SEAWEED", price: 4500, category: "Sembako", weight: "3gr", image: "https://i.ibb.co.com/5XBm4N8t/106.jpg" },
+  { name: "KEJU EMINA SLICE MOZZARELLA", price: 12000, category: "Sembako", weight: "isi 5", image: "https://i.ibb.co.com/tpTkLjM4/107.jpg" },
+  { name: "KEJU PROCHIZ GOLD SACHET", price: 2500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/d4KgSwTL/108.jpg" },
+  { name: "KEJU PROCHIZ SPREADY CHEDDAR", price: 14000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/4R9BdFWx/109.jpg" },
+  { name: "KEJU KRAFT CHEDDAR", price: 28000, category: "Sembako", weight: "15gr", image: "https://i.ibb.co.com/Mxgq7M0W/110.jpg" },
+  { name: "KEJU PROCHIZ GOLD CHEDDAR", price: 14000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/B5SBrHgB/111.jpg" },
+  { name: "KEJU WINCHEEZ GOLD", price: 12000, category: "Sembako", weight: "170Gr", image: "https://i.ibb.co.com/yc4qgLMv/112.jpg" },
+  { name: "KEJU EMINA Shred", price: 12000, category: "Sembako", weight: "160Gr", image: "https://i.ibb.co.com/cXFmmRTz/113.jpg" },
+  { name: "MAMA SUKA RUMPUT LAUT KOREA BBQ", price: 14500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/0RkWFccX/114.jpg" },
+  { name: "MAMA SUKA RUMPUT LAUT KOREA ORIGINAL", price: 14500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/Kp7pmNwT/115.jpg" },
+  { name: "GOURMED SAUS KEJU", price: 23000, category: "Sembako", weight: "500Gr", image: "https://i.ibb.co.com/h1ZWMWx2/116.jpg" },
+  { name: "JAVA RICEPAPER BULAT", price: 20000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/7tGvCVK2/117.jpg" },
+  { name: "HERRING BRAND", price: 27000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/NgPrWT8k/118.jpg" },
+  { name: "LAFONTE SPAGHETTI", price: 9000, category: "Sembako", weight: "225Gr", image: "https://i.ibb.co.com/bMJf5S0H/119.jpg" },
+  { name: "LAFONTE LASAGNA", price: 23000, category: "Sembako", weight: "230Gr", image: "https://i.ibb.co.com/BVnd6v1N/120.jpg" },
+  { name: "LAFONTE MACARONI", price: 8500, category: "Sembako", weight: "225Gr", image: "https://i.ibb.co.com/tpD6bPd4/121.jpg" },
+  { name: "JAVA RICEPAPER KOTAK", price: 20000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/1fn4w7Jb/122.jpg" },
+  { name: "MC LEWIS HOT&HOT", price: 10000, category: "Sembako", weight: "900Gr", image: "https://i.ibb.co.com/JwZzL8WW/123.jpg" },
+  { name: "MC LEWIS CHILI SAUCE VALUE", price: 13000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/Xkxgcb7v/124.jpg" },
+  { name: "HOT 1 SAUS SAMBEL SACHET", price: 6500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/zv9QfWw/125.jpg" },
+  { name: "LAFONTE SPAGHETTI", price: 17000, category: "Sembako", weight: "450Gr", image: "https://i.ibb.co.com/CxK1rmc/126.jpg" },
+  { name: "MC LEWIS SAUS TOMAT SACHET", price: 7000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/vCj73pdt/127.jpg" },
+  { name: "MC LEWIS CHILI SAUCE SACHET", price: 7000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/Zn78XF9/128.jpg" },
+  { name: "DEL MONTE SAUS TOMAT SACHET", price: 6500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/wryNsdqB/129.jpg" },
+  { name: "MAMA SUKA SALAD DRESSING", price: 7500, category: "Sembako", weight: "100gr", image: "https://i.ibb.co.com/zVTc34NC/130.jpg" },
+  { name: "PRIMA AGUNG SAUS CARBONARA", price: 20000, category: "Sembako", weight: "250Gr", image: "https://i.ibb.co.com/wFw8sGxQ/131.jpg" },
+  { name: "LA FONTE BOLOGNESE SAUS", price: 17500, category: "Sembako", weight: "315Gr", image: "https://i.ibb.co.com/ZbJZhNC/132.jpg" },
+  { name: "SAORI LADA HITAM", price: 12500, category: "Sembako", weight: "133Mil", image: "https://i.ibb.co.com/dJHg6ct8/133.jpg" },
+  { name: "DEL MONTE SPAGHETTI SAUCE", price: 11000, category: "Sembako", weight: "250Gr", image: "https://i.ibb.co.com/6JyFB5KW/134.jpg" },
+  { name: "SAORI SAUS TERIAKI", price: 12000, category: "Sembako", weight: "135Mil", image: "https://i.ibb.co.com/NnmmwX5q/135.jpg" },
+  { name: "SAORI SAUS TIRAM", price: 12500, category: "Sembako", weight: "133Mil", image: "https://i.ibb.co.com/SDd7dS6k/136.jpg" },
+  { name: "JAVA MINYAK WIJEN", price: 19500, category: "Sembako", weight: "135Mil", image: "https://i.ibb.co.com/0RVt182x/137.jpg" },
+  { name: "MINYAK WIJEN OH GUAN HING", price: 16000, category: "Sembako", weight: "100Mil", image: "https://i.ibb.co.com/F2VtBZg/138.jpg" },
+  { name: "KECAP ASIN ISTIMEWA", price: 8500, category: "Sembako", weight: "140Mil", image: "https://i.ibb.co.com/RTsR5w7B/139.jpg" },
+  { name: "KECAP IKAN DJOE HOA", price: 12500, category: "Sembako", weight: "135Mil", image: "https://i.ibb.co.com/SDbQXGxc/140.jpg" },
+  { name: "ABC KECAP ASIN", price: 7000, category: "Sembako", weight: "133Mil", image: "https://i.ibb.co.com/JRdYXttT/141.jpg" },
+  { name: "KECAP INGGRIS", price: 12000, category: "Sembako", weight: "135Gr", image: "https://i.ibb.co.com/FLPWjLcZ/142.jpg" },
+  { name: "DEL MONTE SAUS TOMAT", price: 7000, category: "Sembako", weight: "135Mil", image: "https://i.ibb.co.com/dwB5wPSd/143.jpg" },
+  { name: "ABC EXTREME PEDAS", price: 9500, category: "Sembako", weight: "135gr", image: "https://i.ibb.co.com/PvZXpjPy/144.jpg" },
+  { name: "ABC SAUS TOMAT", price: 9000, category: "Sembako", weight: "135Mil", image: "https://i.ibb.co.com/2YdMrwZh/145.jpg" },
+  { name: "ABC KECAP MANIS", price: 10000, category: "Sembako", weight: "130Mil", image: "https://i.ibb.co.com/vCWx11Kd/146.jpg" },
+  { name: "MAMA SUKA HOT LAVA", price: 10000, category: "Sembako", weight: "160Gr", image: "https://i.ibb.co.com/21b2pqXB/147.jpg" },
+  { name: "SAUS TIRAM CAP PANDA LEE KUM KEE", price: 16500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/r2xzTQkD/148.jpg" },
+  { name: "INDOFOOD SAMBEL BANGKOK", price: 9000, category: "Sembako", weight: "135Mil", image: "https://i.ibb.co.com/JwyL6YwF/149.jpg" },
+  { name: "DEL MONTE EXTRA HOT", price: 8000, category: "Sembako", weight: "135Mil", image: "https://i.ibb.co.com/nK9sd5b/150.jpg" },
+  { name: "KEWPIE WIJEN SANGRAI", price: 33000, category: "Sembako", weight: "200Mil", image: "https://i.ibb.co.com/d0pKL3gS/151.jpg" },
+  { name: "INDOFOOD SAMBEL EXTRA PEDAS", price: 7500, category: "Sembako", weight: "135Mil", image: "https://i.ibb.co.com/Rpj2WxZt/152.jpg" },
+  { name: "MAMA SUKA SAUS MENTAI", price: 15000, category: "Sembako", weight: "250Gr", image: "https://i.ibb.co.com/9HfLD9bV/153.jpg" },
+  { name: "PRIMA AGUNG SAUS MENTAI", price: 12500, category: "Sembako", weight: "100Gr", image: "https://i.ibb.co.com/FbXDYnr6/154.jpg" },
+  { name: "MY TASTE SAUS TERIYAKI", price: 8500, category: "Sembako", weight: "100Gr", image: "https://i.ibb.co.com/BHpyzjS7/155.jpg" },
+  { name: "DEL MONTE SAUS BBQ", price: 11000, category: "Sembako", weight: "250Gr", image: "https://i.ibb.co.com/G3tj74cB/156.jpg" },
+  { name: "PRIMA AGUNG SAUS KEJU", price: 12500, category: "Sembako", weight: "250Gr", image: "https://i.ibb.co.com/Kc366tbz/157.jpg" },
+  { name: "PRIMA AGUNG SAUS KEJU", price: 20000, category: "Sembako", weight: "500Gr", image: "https://i.ibb.co.com/84bQKf4p/158.jpg" },
+  { name: "MY TASTE SAUS GOCHUJANG", price: 26500, category: "Sembako", weight: "500Gr", image: "https://i.ibb.co.com/x8BwPqNT/159.jpg" },
+  { name: "MY TASTE BLACK PAPER SAUCE", price: 9500, category: "Sembako", weight: "100Gr", image: "https://i.ibb.co.com/jP42YS4f/160.jpg" },
+  { name: "MY TASTE BBQ SAUCE", price: 8500, category: "Sembako", weight: "100Gr", image: "https://i.ibb.co.com/4RxZZFby/161.jpg" },
+  { name: "MY TASTE BBQ SAUCE", price: 20000, category: "Sembako", weight: "500Gr", image: "https://i.ibb.co.com/Zp8R9N5D/162.jpg" },
+  { name: "KEWPIE WIJEN SANGRAI", price: 7000, category: "Sembako", weight: "50Mil", image: "https://i.ibb.co.com/hJK7Ht5V/163.jpg" },
+  { name: "DEL MONTE SAUCE EXTRA HOT", price: 7500, category: "Sembako", weight: "200Gr", image: "https://i.ibb.co.com/gLHmfZhB/164.jpg" },
+  { name: "DEL MONTE SAUCE TOMAT", price: 7000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/gbmVCrYP/165.jpg" },
+  { name: "HOT 1 SAUS SAMBAL", price: 15000, category: "Sembako", weight: "1Kg", image: "https://i.ibb.co.com/rG2Rvc4H/166.jpg" },
+  { name: "MC LEWIS MAYO ORI", price: 7000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/Df0ypMHS/167.jpg" },
+  { name: "MAYUMI ORIGINAL", price: 7000, category: "Sembako", weight: "100Gr", image: "https://i.ibb.co.com/Gfmp53LJ/168.jpg" },
+  { name: "MAYUMI PEDAS", price: 8000, category: "Sembako", weight: "100Gr", image: "https://i.ibb.co.com/jkH5Rzjz/169.jpg" },
+  { name: "GOURMET BBQ", price: 10000, category: "Sembako", weight: "250Gr", image: "https://i.ibb.co.com/fGrV8Lnn/170.jpg" },
+  { name: "MAMAYO ORIGINAL", price: 6000, category: "Sembako", weight: "100gr", image: "https://i.ibb.co.com/67fK5HL0/171.jpg" },
+  { name: "MY TASTE SAUS ASAM MANIS", price: 20000, category: "Sembako", weight: "500gr", image: "https://i.ibb.co.com/4vG4hW1/172.jpg" },
+  { name: "MY TASTE SPICY BBQ SAUCE", price: 22000, category: "Sembako", weight: "500gr", image: "https://i.ibb.co.com/jvz8H2V5/173.jpg" },
+  { name: "MAMAYO ORIGINAL", price: 24000, category: "Sembako", weight: "1kg", image: "https://i.ibb.co.com/Y67BXWY/174.jpg" },
+  { name: "MAMAYO ORIGINAL", price: 14000, category: "Sembako", weight: "500gr", image: "https://i.ibb.co.com/HTy9kVjR/175.jpg" },
+  { name: "MAESTRO SAUCE MAYO", price: 24000, category: "Sembako", weight: "1kg", image: "https://i.ibb.co.com/fdL0rwrQ/176.jpg" },
+  { name: "MAESTRO SAUCE MAYO", price: 12500, category: "Sembako", weight: "500gr", image: "https://i.ibb.co.com/gMbmtdcD/177.jpg" },
+  { name: "GOURMET EXTRA PEDAS", price: 16000, category: "Sembako", weight: "1kg", image: "https://i.ibb.co.com/zVYTbzTK/178.jpg" },
+  { name: "GOURMET SAMBAL", price: 14500, category: "Sembako", weight: "1kg", image: "https://i.ibb.co.com/Z6hwTns0/179.jpg" },
+  { name: "SOHIB NUGGET LOVE", price: 11000, category: "Frozen", weight: "250gr", image: "https://i.ibb.co.com/9mxYZYv2/180.jpg" },
+  { name: "KANZLER CRISPY SPICY NUGGET", price: 45000, category: "Frozen", weight: "450gr", image: "https://i.ibb.co.com/kswGMQ4y/181.jpg" },
+  { name: "KANZLER CHICKEN NUGGET", price: 41000, category: "Frozen", weight: "450gr", image: "https://i.ibb.co.com/cKYxkk5w/182.jpg" },
+  { name: "BEL FOOD NUGGET CERIA", price: 12000, category: "Frozen", weight: "170gr", image: "https://i.ibb.co.com/r2jNbjHv/183.jpg" },
+  { name: "CHICKY WICKY NUGGET DINO", price: 18000, category: "Frozen", weight: "250gr", image: "https://i.ibb.co.com/DfXwvt31/184.jpg" },
+  { name: "AKUMO NUGGET", price: 44000, category: "Frozen", weight: "1kg", image: "https://i.ibb.co.com/Rknzdryc/185.jpg" },
+  { name: "CHAMP CHICKEN NUGGET", price: 32500, category: "Frozen", weight: "450gr", image: "https://i.ibb.co.com/fdbQ0VtY/186.jpg" },
+  { name: "KANZLER CRISPY CHICKEN NUGGET STEAK", price: 41000, category: "Frozen", weight: "450gr", image: "https://i.ibb.co.com/d45tRjmj/187.jpg" },
+  { name: "KANZLER CRISPY CHICKEN NUGGET", price: 41000, category: "Frozen", weight: "450gr", image: "https://i.ibb.co.com/8gcDdcr2/188.jpg" },
+  { name: "AKUMO CHICKEN NUGGET", price: 13000, category: "Frozen", weight: "250gr", image: "https://i.ibb.co.com/LzFcmnf2/189.jpg" },
+  { name: "EAT JOY CHICKEN NUGGET BALL", price: 36500, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/xKjKzswF/190.jpg" },
+  { name: "CHAMP CRUNCHY CHICKEN NUGGET", price: 32500, category: "Frozen", weight: "450gr", image: "https://i.ibb.co.com/4nn4L7SL/192.jpg" },
+  { name: "SURI CHICKEN NUGGET", price: 10000, category: "Frozen", weight: "250gr", image: "https://i.ibb.co.com/nNztLmzb/193.jpg" },
+  { name: "BELL FOOD CHICKEN NUGGET CERIA", price: 40500, category: "Frozen", weight: "450gr", image: "https://i.ibb.co.com/3YNx0bQn/194.jpg" },
+  { name: "SURI CHICKEN NUGGET", price: 30000, category: "Frozen", weight: "1kg", image: "https://i.ibb.co.com/MHTDBkz/195.jpg" },
+  { name: "CHAMP CHICKEN NUGGET", price: 54000, category: "Frozen", weight: "900gr", image: "https://i.ibb.co.com/nM8tbDkX/196.jpg" },
+  { name: "CHAMP CHICKEN NUGGET", price: 18000, category: "Frozen", weight: "225gr", image: "https://i.ibb.co.com/hvwWmgp/197.jpg" },
+  { name: "AKUMO CHICKEN NUGGET", price: 24000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/6RDhyKV5/198.jpg" },
+  { name: "NUGGET SALAM", price: 19500, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/XZJRXJVR/199.jpg" },
+  { name: "FIESTA CRISPY BUBBLE", price: 35000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/8nQsgbkv/200.jpg" },
+  { name: "BELL FOOD CHICKEN NUGGET CERIA", price: 40500, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/rf4wC1FK/201.jpg" },
+  { name: "BELL FOOD CHICKEN NUGGET FAVORIT", price: 32000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/GQmrngKr/202.jpg" },
+  { name: "BELL FOOD CHICKEN NUGGET UENAAAK", price: 20000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/vxjRgxGg/203.jpg" },
+  { name: "HEMATO NUGGET GOLD", price: 23000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/XkJP7bdC/204.jpg" },
+  { name: "HEMATO NUGGET AYAM REGULER", price: 19000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/TD53YmkF/205.jpg" },
+  { name: "EAT JOY CHICKEN NUGGET", price: 37000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/Jjht7D6X/206.jpg" },
+  { name: "BAGELEN LILY", price: 16000, category: "Snack", weight: 0, image: "https://i.ibb.co.com/4ZGpgxVx/29.jpg" },
+  { name: "KUPING GAJAH", price: 7500, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/35K2GyB8/31.jpg" },
+  { name: "KRIPIK PISANG NANGKA", price: 11000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/gMZfTYWJ/9.jpg" },
+  { name: "TWIST CORN BBQ", price: 14000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/35Xx9czM/54.jpg" },
+  { name: "TEMPE SAGU", price: 14000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/VWPFrVKy/49.jpg" },
+  { name: "UBM WAFER COKLAT", price: 10000, category: "Snack", weight: 0, image: "https://i.ibb.co.com/v6jBtRPy/7.jpg" },
+  { name: "BAGELEN JIREH KEJU", price: 21000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/TDZ3z04B/43.jpg" },
+  { name: "USUS ORI", price: 13000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/DH0qSQG8/47.jpg" },
+  { name: "KERUPUK TEMPE", price: 14000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.back/Rns6fx0/19.jpg" },
+  { name: "KACANG KULIT SANGRAI", price: 10000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/DgwK1bpd/34.jpg" },
+  { name: "KACANG BAWANG ASHOKA", price: 20000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/HfnhZZWX/27.jpg" },
+  { name: "MAKARONI BANTAT ORI", price: 9000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/39Rqs1vF/30.jpg" },
+  { name: "PISANG MANIS MUJI", price: 11000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/5WyM94jd/15.jpg" },
+  { name: "KRIPIK PISANG GEPOK", price: 13000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/ksm7rZcT/46.jpg" },
+  { name: "COM RING ORI", price: 7500, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/sJsmRRxk/32.jpg" },
+  { name: "KACANG KORO ORI", price: 9000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/PvycKRyV/36.jpg" },
+  { name: "STEAK KEJU TES", price: 15000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/PzGCYTb6/39.jpg" },
+  { name: "COM RING PEDAS", price: 8000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/R42dm8zB/18.jpg" },
+  { name: "TWIST JAGUNG PANGGANG", price: 13000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/V08nFvPn/38.jpg" },
+  { name: "KERUPUK KOIN", price: 10000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/mrL2VmZj/42.jpg" },
+  { name: "KUACI REBO", price: 23000, category: "Snack", weight: "150gr", image: "https://i.ibb.co.com/FqC9wjx3/20.jpg" },
+  { name: "UBM SQUARE PUFF", price: 10000, category: "Snack", weight: 0, image: "https://i.ibb.co.com/Fq7VqQpq/35.jpg" },
+  { name: "STEAK SUNVITA", price: 5000, category: "Snack", weight: "125gr", image: "https://i.ibb.co.com/bjZscdzL/23.jpg" },
+  { name: "GURILEM", price: 12000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/nMQfmhxv/41.jpg" },
+  { name: "ASTOR ASTAND COKLAT", price: 13000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/s95D3sB2/14.jpg" },
+  { name: "KERIPIK SINGKONG RUJAK", price: 10000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/60QNvW01/33.jpg" },
+  { name: "UBM WAFER VANILLA", price: 10000, category: "Snack", weight: 0, image: "https://i.ibb.co.com/9HvPDdQ4/4.jpg" },
+  { name: "KENTANG KEJU JJ", price: 11000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/hFJWfdRp/1.jpg" },
+  { name: "STEAK BALADO TES", price: 11000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/MxdQYHFM/13.jpg" },
+  { name: "GEM", price: 10000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/JjF7P1ty/6.jpg" },
+  { name: "SUMPIA", price: 9000, category: "Snack", weight: "250gr", image: "https://i.ibb.co.com/DDzcChDX/40.jpg" },
+  { name: "DE CIRENG RUJAK", price: 10000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/rRn7jcx0/238.jpg" },
+  { name: "SAKANA SIOMAY", price: 27000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/qFgHmDc3/239.jpg" },
+  { name: "ANDY ROLADE SAPI", price: 11000, category: "Frozen", weight: "225gr", image: "https://i.ibb.co.com/jPMwVj2c/240.jpg" },
+  { name: "FIVA ROLADE SAPI", price: 19500, category: "Frozen", weight: "250gr", image: "https://i.ibb.co.com/HLnfjXg4/241.jpg" },
+  { name: "KARWATI ABON PEDAS", price: 20000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/FbJ9QKqX/242.jpg" },
+  { name: "RIOUS PIZZA SMOKE BEEF", price: 21000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/vxfRRg1z/243.jpg" },
+  { name: "JAVA RICE PAPPER KOTAK", price: 20000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/8n7mHRt2/244.jpg" },
+  { name: "BERNADI PLAIN ROLLS", price: 14500, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/Nnny8RDt/245.jpg" },
+  { name: "BAWANG GORENG BOTOL PUTIH", price: 16500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/ymXNc41d/246.jpg" },
+  { name: "KARWATI ABON ORIGINAL", price: 20000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/PvXKbzXW/247.jpg" },
+  { name: "FIESTA SHOESTRING", price: 22000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/xbMMCnm/248.jpg" },
+  { name: "BERNADI ROTI BURGER WIJEN", price: 16000, category: "Frozen", weight: "Isi 6", image: "https://i.ibb.co.com/FkFqYzG2/249.jpg" },
+  { name: "KRAUKK CHICKEN ROLADE", price: 21000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/Xr5QThqv/250.jpg" },
+  { name: "RISOLLAKU ISI RAGOUT", price: 27000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/Py8mzXN/251.jpg" },
+  { name: "DE EGGROLL", price: 23000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/WNjvq1HL/252.jpg" },
+  { name: "EDO PIZZA BASE", price: 15000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/Q3nDZ8yx/254.jpg" },
+  { name: "JAVA RICE PAPPER BULAT", price: 20000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/HTrfqwZ9/255.jpg" },
+  { name: "SBY DONAT PANDAN", price: 17500, category: "Frozen", weight: "Isi 21", image: "https://i.ibb.co.com/G3CCqmZt/256.jpg" },
+  { name: "SBY DONAT UBI", price: 17500, category: "Frozen", weight: "Isi 21", image: "https://i.ibb.co.com/GvS5mXbN/257.jpg" },
+  { name: "ROTI GO COKLAT KEJU", price: 19000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/PGFy5JLB/258.jpg" },
+  { name: "OKEBABZ FULL BEEF", price: 24000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/rf25SVfg/259.jpg" },
+  { name: "CIRENG RUJAK KHARISMA", price: 12000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/G39C3J20/260.jpg" },
+  { name: "ARPI CIRENG CRISPY MOZZARELLA", price: 14000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/xyD9PbP/261.jpg" },
+  { name: "RIOUS PIZZA DOUBLE CHEESE", price: 20500, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/hkS29h0/262.jpg" },
+  { name: "BAWANG GORENG TUTUP MERAH", price: 19000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/KjzQg0B3/263.jpg" },
+  { name: "PEMPEK JOSS", price: 16000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/qL1S1rD1/264.jpg" },
+  { name: "TEKWAN JOSS", price: 17000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/PZBfFVGX/265.jpg" },
+  { name: "BAWANG PUTIH GORENG", price: 17000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/gZGdFCb4/266.jpg" },
+  { name: "GIMBORI BULGOGI", price: 13500, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/cKrWrXLK/267.jpg" },
+  { name: "BERNADI ROTI BURGER POLOS", price: 15000, category: "Frozen", weight: "Isi 6", image: "https://i.ibb.co.com/ccf1H5GQ/268.jpg" },
+  { name: "HERING BRAND", price: 27000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/998r44d8/269.jpg" },
+  { name: "BAKPAO KARAKTER", price: 14000, category: "Frozen", weight: "isi 10", image: "https://i.ibb.co.com/bjQXQ3Ys/270.jpg" },
+  { name: "NITS YOGURT", price: 17000, category: "Frozen", weight: "isi 20", image: "https://i.ibb.co.com/W4B1wG6H/271.jpg" },
+  { name: "FIESTA CRINKLE CUT", price: 23000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/r2v39HHG/272.jpg" },
+  { name: "BANANA COKLAT LUMER", price: 12000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/Df3Pnzwh/273.jpg" },
+  { name: "SBY DONAT SUSU", price: 17500, category: "Frozen", weight: "ISI 21", image: "https://i.ibb.co.com/TMymrw1w/275.jpg" },
+  { name: "FIESTA BUTTER COATED", price: 27500, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/LG4Jy22/276.jpg" },
+  { name: "ARTI CIRENG AYAM PEDAS", price: 16000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/n8nVDF89/277.jpg" },
+  { name: "CIRAWANG", price: 10000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/MxpNx6fh/278.jpg" },
+  { name: "DE DIMSUM SIOMAY", price: 19000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/gZ9jP989/279.jpg" },
+  { name: "BAKPAO KARAKTER", price: 18000, category: "Frozen", weight: "isi 6", image: "https://i.ibb.co.com/kgSz24CL/280.jpg" },
+  { name: "SBY DONAT KENTANG", price: 17500, category: "Frozen", weight: "ISI 21", image: "https://i.ibb.co.com/YBQj0WYH/281.jpg" },
+  { name: "KARWATI GEPUK BASAH", price: 21000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/0jmjp2hq/282.jpg" },
+  { name: "ARTI CIRENG BAKSO PEDAS", price: 14000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/3ystVVkN/283.jpg" },
+  { name: "FITALIA SHOESTRING", price: 27000, category: "Frozen", weight: "1Kg", image: "https://i.ibb.co.com/1fbKzz5b/284.jpg" },
+  { name: "KARWATI GEPUK KERING", price: 21000, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/B2pZTqRr/285.jpg" },
+  { name: "DEL MONTE EXTRA HOT", price: 7500, category: "Sembako", weight: "200gr", image: "https://i.ibb.co.com/27DGqXDX/286.jpg" },
+  { name: "GIMBORI ORIGINAL", price: 13500, category: "Sembako", weight: 0, image: "https://i.ibb.co.com/k2Dj64yD/287.jpg" },
+  { name: "INOCA BASO ACI", price: 15000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/jPV0yqWK/288.jpg" },
+  { name: "DEL MONTE SAUS TOMAT", price: 7500, category: "Sembako", weight: "200gr", image: "https://i.ibb.co.com/mC28cvfB/289.jpg" },
+  { name: "LEZZA CHICKEN KARAGE", price: 41500, category: "Frozen", weight: "400gr", image: "https://i.ibb.co.com/WW5mXRwz/290.jpg" },
+  { name: "EAT JOY CHICKEN NUGGET", price: 37000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/Psb5nYJt/291.jpg" },
+  { name: "EAT JOY POPCORN JAGUNG", price: 42500, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/8gXfTpbz/293.jpg" },
+  { name: "ASIMO CHICKEN NUGGET", price: 11000, category: "Frozen", weight: "250gr", image: "https://i.ibb.co.com/F4qwdgKY/295.jpg" },
+  { name: "PERFECTIO CHICKEN KARAGE", price: 23000, category: "Frozen", weight: "250gr", image: "https://i.ibb.co.com/tTczgRZ4/303.jpg" },
+  { name: "AKUMO CHICKEN NUGGET", price: 44000, category: "Frozen", weight: "1kg", image: "https://i.ibb.co.com/Rknzdryc/185.jpg" },
+  { name: "BUMIFOOD EBI FURAI", price: 29000, category: "Frozen", weight: 0, image: "https://i.ibb.co.com/hJCHwT1C/310.jpg" },
+  { name: "PERFECTIO SPICY WING", price: 40000, category: "Frozen", weight: "450gr", image: "https://i.ibb.co.com/ycdk4r0S/311.jpg" },
+  { name: "KANZLER CHICKEN CORDON BLEU", price: 46000, category: "Frozen", weight: "300gr", image: "https://i.ibb.co.com/nNDqZmZh/312.jpg" },
+  { name: "PRIMADONA SPICY WING", price: 63000, category: "Frozen", weight: "1kg", image: "https://i.ibb.co.com/WvDcjsM1/316.jpg" },
+  { name: "FIESTA KARAGE", price: 42000, category: "Frozen", weight: "400gr", image: "https://i.ibb.co.com/Fqj1QfRs/318.jpg" },
+  { name: "PRIMADONA SPICY WING", price: 35000, category: "Frozen", weight: "500gr", image: "https://i.ibb.co.com/ZRpwJpGy/321.jpg" }
 ];
 
-// Generate Automation produk
-const products = [];
-for (let i = 0; i < 325; i++) {
-    const item = baseData[i % baseData.length];
-    products.push({
-        name: `${item.name} #${i + 1}`,
-        price: item.price + (i * 10),
-        category: item.category,
-        image: item.image,
-        weight: item.weight
-    });
-}
+
+
+// MENGAKTIFKAN DATA (PENTING!)
+const products = baseData; 
 
 let itemsToShow = 12;
 const productList = document.getElementById("product-list");
 const showAllBtn = document.getElementById("showAllBtn");
 const noProducts = document.getElementById("no-products");
 
-function resetPaginationAndRender() {
-    itemsToShow = 12;
-    renderProducts();
+function formatWeight(w) {
+    if (w === 0 || w === "0") return ""; 
+    if (typeof w === 'number') return w + "g"; 
+    return w; 
 }
 
 function renderProducts() {
     let filtered = [...products];
 
-    // SEARCH
+    // Filter Search
     const keyword = document.getElementById("searchInput").value.toLowerCase();
     if (keyword) {
         filtered = filtered.filter(p => p.name.toLowerCase().includes(keyword));
     }
 
-    // CATEGORY
-    const activeCats = Array.from(document.querySelectorAll("input[name='category']:checked")).map(c => c.value);
+    // Filter Kategori
+    const activeCats = Array.from(document.querySelectorAll("input[name='category']:checked")).map(c => c.value.toLowerCase());
     if (activeCats.length > 0) {
-        filtered = filtered.filter(p => activeCats.includes(p.category));
+        filtered = filtered.filter(p => activeCats.includes(p.category.toLowerCase()));
     }
 
-    // SORT
+    // Sort
     const sortVal = document.getElementById("SortBy").value;
     if (sortVal === "price-asc") filtered.sort((a,b) => a.price - b.price);
     if (sortVal === "price-desc") filtered.sort((a,b) => b.price - a.price);
     if (sortVal === "name-asc") filtered.sort((a,b) => a.name.localeCompare(b.name));
 
     const visible = filtered.slice(0, itemsToShow);
-    productList.innerHTML = "";
+    
+    // Bersihkan list sebelum render ulang
+    if (productList) {
+        productList.innerHTML = "";
+    }
 
     if (visible.length === 0) {
-        noProducts.classList.remove("hidden");
-        showAllBtn.style.display = "none";
+        if(noProducts) noProducts.classList.remove("hidden");
+        if(showAllBtn) showAllBtn.style.display = "none";
     } else {
-        noProducts.classList.add("hidden");
+        if(noProducts) noProducts.classList.add("hidden");
         visible.forEach(p => {
-            const waLink = `https://wa.me/6285716786682?text=Halo%20Admin,%20saya%20order:%0A*${encodeURIComponent(p.name)}*`;
+            const displayWeight = formatWeight(p.weight);
+            const waLink = `https://wa.me/6285716786682?text=Halo%20Admin,%20saya%20mau%20order:%0A%0A*Produk:*%20${encodeURIComponent(p.name)}%0A*Harga:*%20Rp%20${p.price.toLocaleString('id-ID')}`;
+            
             productList.innerHTML += `
                 <li class="group bg-white rounded-3xl border border-zinc-200 p-2 shadow-sm hover:shadow-xl hover:border-yellow-400 transition-all cursor-pointer overflow-hidden" onclick="window.open('${waLink}','_blank')">
                     <div class="aspect-square rounded-2xl overflow-hidden bg-zinc-100 relative">
-                        <div class="absolute top-2 right-2 bg-black/50 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-lg font-bold">${p.weight}g</div>
-                        <img src="${p.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        ${displayWeight ? `<div class="absolute top-2 right-2 bg-black/60 backdrop-blur-md text-white text-[9px] px-2 py-1 rounded-lg font-black z-10 uppercase">${displayWeight}</div>` : ''}
+                        <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://placehold.co/400?text=Gambar+Tidak+Ada'">
                     </div>
                     <div class="p-3 text-center lg:text-left">
                         <span class="text-[8px] font-black bg-yellow-100 text-yellow-700 px-2 py-1 rounded-md uppercase">${p.category}</span>
                         <h3 class="mt-2 text-sm font-bold text-zinc-900 truncate uppercase">${p.name}</h3>
                         <p class="text-sm font-black text-zinc-900 mt-1">Rp ${p.price.toLocaleString('id-ID')}</p>
-                        <button class="w-full mt-3 py-2 bg-zinc-900 text-white text-[9px] font-black uppercase tracking-widest rounded-xl group-hover:bg-yellow-500 transition-colors">Beli</button>
+                        <button class="w-full mt-3 py-2 bg-zinc-900 text-white text-[9px] font-black uppercase tracking-widest rounded-xl group-hover:bg-yellow-500 transition-colors">Beli Sekarang</button>
                     </div>
                 </li>`;
         });
-        showAllBtn.style.display = itemsToShow >= filtered.length ? "none" : "inline-block";
+        if(showAllBtn) showAllBtn.style.display = itemsToShow >= filtered.length ? "none" : "inline-block";
     }
 }
 
-showAllBtn.addEventListener("click", () => { itemsToShow += 24; renderProducts(); });
-document.getElementById("resetFilter").addEventListener("click", () => {
-    document.querySelectorAll("input[name='category']").forEach(c => c.checked = false);
-    document.getElementById("SortBy").value = "none";
-    document.getElementById("searchInput").value = "";
-    resetPaginationAndRender();
-});
+function resetPaginationAndRender() {
+    itemsToShow = 12;
+    renderProducts();
+}
 
-renderProducts();
+// Event Listeners
+if(showAllBtn) {
+    showAllBtn.addEventListener("click", () => { itemsToShow += 24; renderProducts(); });
+}
+
+const resetBtn = document.getElementById("resetFilter");
+if(resetBtn) {
+    resetBtn.addEventListener("click", () => {
+        document.querySelectorAll("input[name='category']").forEach(c => c.checked = false);
+        document.getElementById("SortBy").value = "none";
+        document.getElementById("searchInput").value = "";
+        resetPaginationAndRender();
+    });
+}
+
+// Jalankan saat halaman pertama kali dibuka
+document.addEventListener('DOMContentLoaded', renderProducts);
 </script>
 
 
