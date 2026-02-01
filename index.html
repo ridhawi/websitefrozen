@@ -702,10 +702,15 @@ function renderProducts() {
     }
 
     // Filter Kategori
-    const activeCats = Array.from(document.querySelectorAll("input[name='category']:checked")).map(c => c.value.toLowerCase());
-    if (activeCats.length > 0) {
-        filtered = filtered.filter(p => activeCats.includes(p.category.toLowerCase()));
-    }
+const activeCats = Array.from(document.querySelectorAll("input[name='category']:checked"))
+                        .map(c => c.value.toLowerCase());
+
+if (activeCats.length > 0) {
+    filtered = filtered.filter(p => {
+        // Kita pastikan kategori di produk ada, lalu kecilkan semua hurufnya sebelum diadu
+        return p.category && activeCats.includes(p.category.toLowerCase());
+    });
+}
 
     // Sort
     const sortVal = document.getElementById("SortBy").value;
